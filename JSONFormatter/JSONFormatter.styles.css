@@ -34,6 +34,31 @@ header.header .tool-title {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* Back/Home button wrapper */
+.back-home-wrapper {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.back-home-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #4b6cb7; /* same as other buttons */
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.back-home-link:hover {
+  background-color: #3a539b;
+}
+
 /* Upload label styling */
 .upload-label {
   display: inline-block;
