@@ -10,8 +10,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
 </head>
 <body>
+
   <div class="container">
-    <h1>Simple PDF Merger</h1>
+
+    <!-- Header with large title + back button -->
+    <header class="tool-header">
+      <h1>📄 Simple PDF Merger</h1>
+      <div class="back-home-wrapper">
+        <a href="https://grinder3011.github.io/isk/" class="back-home-link">← Back to Home</a>
+      </div>
+      <p>Upload and merge multiple PDF files quickly and easily.</p>
+    </header>
 
     <!-- Drag & Drop Upload Area -->
     <label id="drop-zone" for="file-input" tabindex="0" role="button" aria-label="Upload PDF files">
@@ -29,15 +38,12 @@
     </div>
     <div id="output"></div>
 
-    <!-- Accordion container -->
+    <!-- Accordion / Tooltip container -->
     <div class="accordion-container">
-      
-      <!-- Tooltip trigger -->
       <button class="tooltip-toggle-btn" data-tooltip-target="json-tip" aria-expanded="false" aria-controls="json-tip">
         <i class="fas fa-lightbulb tooltip-icon"></i> How to use this tool?
       </button>
 
-      <!-- Modular Tooltip Content -->
       <div id="json-tip" class="tooltip-box hidden" aria-live="polite">
         <p>💡 <strong>How to use this tool:</strong></p>
         <ul>
@@ -47,9 +53,9 @@
           <li>🔄 Use <em>Reset</em> to start over.</li>
         </ul>
       </div>
-      
     </div>
-  </div>
+
+  </div> <!-- /.container -->
 
   <!-- Modals for mobile -->
   <div id="usage-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="usage-toggle">
