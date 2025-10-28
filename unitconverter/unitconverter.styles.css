@@ -24,6 +24,10 @@ body {
   font-weight: 700;
 }
 
+.tool-header h1 {
+  color: white;
+}
+
 /* Back button below header */
 .back-home-wrapper {
   text-align: center;
