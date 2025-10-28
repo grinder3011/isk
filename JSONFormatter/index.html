@@ -9,30 +9,35 @@
   <link rel="stylesheet" href="JSONFormatter.styles.css" />
 </head>
 <body>
-  <main class="container">
-    <h1>🧾 JSON Formatter / Validator</h1>
+  <!-- Full-width header with title and icon -->
+  <header class="header">
+    <h1 class="tool-title">🧾 JSON Formatter / Validator</h1>
+  </header>
 
+  <main class="container">
+    <!-- Upload button -->
     <label for="upload-json" class="upload-label" title="Upload JSON file">
       📁 Upload JSON
       <input type="file" id="upload-json" accept=".json,application/json" hidden />
     </label>
 
+    <!-- JSON input area -->
     <textarea id="json-input" placeholder="Paste or type your JSON here..." spellcheck="false"></textarea>
 
+    <!-- Action buttons -->
     <div class="buttons-row">
       <button id="format-btn" class="btn" title="Format JSON">✨ Format JSON</button>
       <button id="validate-btn" class="btn" title="Validate JSON">🔍 Validate JSON</button>
       <button id="clear-btn" class="btn" title="Clear input" disabled>🗑️ Clear</button>
       <button id="copy-btn" class="btn" title="Copy formatted JSON to clipboard" disabled>📋 Copy</button>
       <button id="download-btn" class="btn" title="Download formatted JSON" disabled>⬇️ Download</button>
+    </div>
 
-      
-    <!-- Tooltip trigger -->
+    <!-- Tooltip toggle -->
     <button class="tooltip-toggle-btn" data-tooltip-target="json-tip" aria-expanded="false" aria-controls="json-tip">
       <i class="fas fa-lightbulb tooltip-icon"></i> How to use this tool?
     </button>
-    </div>
-  
+
     <!-- Tooltip content -->
     <div id="json-tip" class="tooltip-box hidden" aria-live="polite">
       <p>💡 <strong>How to use this tool:</strong></p>
@@ -44,6 +49,7 @@
       </ul>
     </div>
 
+    <!-- Validation/result area -->
     <div id="validation-result" class="validation-result" aria-live="polite"></div>
   </main>
 
