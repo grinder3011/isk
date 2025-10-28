@@ -1,22 +1,37 @@
-/* Basic resets and container styling */
+/* Base reset and font */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f8f9fa;
   color: #333;
   margin: 0;
-  padding: 1rem;
+  padding: 0;
 }
 
+/* Full-width header */
+header.header {
+  width: 100%;
+  background: #4b6cb7;
+  color: white;
+  padding: 1.2rem 0;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  user-select: none;
+}
+
+header.header .tool-title {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Main container centered */
 .container {
   max-width: 800px;
-  margin: 0 auto;
-}
-
-h1 {
-  margin-bottom: 1rem;
-  font-weight: 700;
-  color: #222;
-  user-select: none;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* Upload label styling */
@@ -28,7 +43,7 @@ h1 {
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
   user-select: none;
   transition: background 0.3s;
 }
@@ -39,7 +54,7 @@ h1 {
   outline: none;
 }
 
-/* Textarea styling */
+/* JSON textarea */
 #json-input {
   width: 100%;
   height: 320px;
@@ -58,27 +73,30 @@ h1 {
   outline: none;
 }
 
-/* Buttons row */
+/* Buttons row centered */
 .buttons-row {
-  margin-top: 0.8rem;
+  margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
+  justify-content: center;
   align-items: center;
 }
 
-/* Main buttons styling with .btn class */
+/* Main buttons styling */
 .btn {
   background: #4b6cb7;
   color: white;
   border: none;
-  padding: 0.5rem 1.1rem;
+  padding: 0.5rem 1.2rem;
   font-size: 1rem;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
   user-select: none;
   transition: background 0.3s;
+  min-width: 140px;
+  text-align: center;
 }
 
 .btn:hover:not(:disabled),
@@ -92,67 +110,80 @@ h1 {
   cursor: not-allowed;
 }
 
-/* Tooltip button with custom styling */
-.tooltip-btn {
-  background: transparent;
+/* Tooltip button styling */
+.tooltip-toggle-btn {
+  display: block;
+  margin: 1.2rem auto;
+  font-size: 1rem;
+  background: none;
+  border: none;
   color: #4b6cb7;
-  padding: 0.3rem 0.6rem;
-  font-weight: 600;
   cursor: pointer;
-  border-radius: 4px;
-  border: 1.5px solid transparent;
-  transition: color 0.3s, border-color 0.3s, text-decoration 0.3s;
   user-select: none;
-  text-decoration: none;
+  text-align: center;
 }
 
-.tooltip-btn:hover,
-.tooltip-btn:focus {
-  background: transparent;
-  color: #4b6cb7;
-  border-color: transparent;
-  outline: none;
+.tooltip-toggle-btn:hover {
   text-decoration: underline;
 }
 
-/* Tooltip text box */
-.tooltip-text {
-  margin-top: 0.5rem;
+/* Tooltip box */
+.tooltip-box {
+  max-width: 700px;
+  margin: 1rem auto;
   background: #e6f0ff;
   border-left: 5px solid #4b6cb7;
   padding: 0.8rem 1rem;
-  border-radius: 4px;
+  border-radius: 6px;
   color: #1b2a7a;
   font-size: 0.95rem;
   line-height: 1.4;
-  max-width: 800px;
   user-select: text;
 }
 
-.tooltip-text ul {
+.tooltip-box ul {
   margin: 0.3rem 0 0 1.2rem;
   padding: 0;
 }
 
-.tooltip-text li {
+.tooltip-box li {
   margin-bottom: 0.4rem;
 }
 
-/* Hide element helper */
+/* Hide helper */
 .hidden {
   display: none;
 }
 
-/* Validation result message */
+/* Validation result */
 .validation-result {
   margin-top: 1rem;
   font-weight: 600;
   min-height: 1.5em;
-  user-select: none;
+  text-align: center;
 }
+
 .validation-result.success {
   color: #22863a; /* green */
 }
+
 .validation-result.error {
   color: #b02a37; /* red */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .buttons-row {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .container {
+    margin: 1rem;
+    padding: 1rem;
+  }
 }
