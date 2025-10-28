@@ -24,10 +24,6 @@ body {
   font-weight: 700;
 }
 
-.tool-header h1 {
-  color: white;
-}
-
 /* Back button below header */
 .back-home-wrapper {
   text-align: center;
@@ -53,11 +49,6 @@ body {
   padding: 2em;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* Title in container removed (header has title) */
-h1 {
-  display: none;
 }
 
 /* Labels and inputs */
