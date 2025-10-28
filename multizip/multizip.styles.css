@@ -126,3 +126,37 @@ input[type="file"] {
 .actions button:hover {
   background: #005fa3;
 }
+
+/* ==== Back to homepage button styling ==== */
+/* Wrapper centers the link horizontally */
+.back-home-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; /* vertical spacing */
+}
+
+/* Back to Home button styling */
+.back-home-link {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    white-space: nowrap; /* prevents wrapping on small screens */
+}
+
+.back-home-link:hover {
+    background-color: #0056b3;
+}
+
+/* Adjust padding/font for very small screens */
+@media (max-width: 400px) {
+    .back-home-link {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
