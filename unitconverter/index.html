@@ -13,12 +13,14 @@
   <!-- Full-width header -->
   <header class="tool-header">
     <h1><span class="logo-highlight">Unit</span> Converter</h1>
-    <div class="back-home-wrapper">
-      <a href="../index.html" class="back-home-link">⬅️ Back to Home</a>
-    </div>
   </header>
 
-  <!-- Main centered container -->
+  <!-- Back button below header -->
+  <div class="back-home-wrapper">
+    <a href="../" class="back-home-link"><i class="fas fa-arrow-left"></i> Back to Tools</a>
+  </div>
+
+  <!-- Main converter container -->
   <div class="converter-container">
     <div class="converter-box">
       <label for="category">Category</label>
@@ -60,6 +62,7 @@
         <i class="fas fa-lightbulb tooltip-icon"></i> How to use this tool?
       </button>
 
+      <!-- Tooltip content -->
       <div id="json-tip" class="tooltip-box hidden" aria-live="polite">
         <p>💡 <strong>How to use this tool:</strong></p>
         <ul>
@@ -73,11 +76,13 @@
         </ul>
       </div>
 
+      <!-- Convert / Reset Buttons -->
       <div class="buttons">
         <button id="convert-btn">Convert</button>
         <button id="reset-btn">Reset</button>
       </div>
 
+      <!-- Batch download options -->
       <div id="batch-options" class="hidden">
         <label for="downloadFormatSelect">Download Format</label>
         <select id="downloadFormatSelect">
@@ -88,8 +93,10 @@
         <button id="download-btn" disabled>⬇️ Download</button>
       </div>
 
+      <!-- Copy button -->
       <button id="copy-btn" disabled>📋 Copy Results</button>
 
+      <!-- Result box -->
       <div id="result" class="result"></div>
     </div>
   </div>
