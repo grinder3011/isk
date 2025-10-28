@@ -1,4 +1,4 @@
-/* Reset & base */
+/* ===== Reset & Base ===== */
 * {
   box-sizing: border-box;
 }
@@ -10,6 +10,7 @@ body {
   line-height: 1.5;
 }
 
+/* ===== Container ===== */
 .container {
   max-width: 480px;
   margin: 2rem auto;
@@ -22,102 +23,53 @@ body {
   gap: 16px;
 }
 
-.header {
+/* ===== Header & Back Button ===== */
+.tool-header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 12px;
+  gap: 12px;
+  text-align: center;
 }
 
-.tool-title {
+.tool-header h1 {
+  font-size: 1.8rem;
   font-weight: 700;
-  font-size: 1.5rem;
   margin: 0;
   color: #0b3d91;
 }
 
-.tooltip-button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 1.4rem;
-  color: #0b3d91;
-  padding: 4px;
-  transition: color 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 600;
-}
-
-.tooltip-button:hover,
-.tooltip-button:focus {
-  color: #06326b;
-  outline: none;
-}
-
-/* Yellow lightbulb icon and label styling */
-.tooltip-icon {
-  color: #f4c430; /* bright yellow */
-}
-
-.tooltip-button:hover .tooltip-icon,
-.tooltip-button:focus .tooltip-icon {
-  color: #d6a500; /* darker yellow on hover */
-}
-
-.tooltip-label {
-  font-weight: 600;
+.tool-header p {
   font-size: 1rem;
+  color: #333;
+  margin: 0;
 }
 
-/* When placed in .main-content area */
-.main-content .tooltip-button {
-  align-self: center;
-  margin-top: -8px;
-  margin-bottom: 4px;
+/* Back to Home button styling */
+.back-home-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
-.tooltip-panel {
-  position: relative;
-  background: #e1f0ff;
-  border-left: 4px solid #0b3d91;
-  padding: 16px 20px 20px 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(11, 61, 145, 0.15);
-  margin-bottom: 16px;
-  font-size: 0.95rem;
-  color: #0b3d91;
+.back-home-link {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  white-space: nowrap;
 }
 
-.tooltip-panel h2 {
-  margin-top: 0;
-  font-weight: 600;
-  font-size: 1.25rem;
-  margin-bottom: 8px;
+.back-home-link:hover {
+  background-color: #0056b3;
 }
 
-.tooltip-close {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  background: none;
-  border: none;
-  font-size: 1.6rem;
-  line-height: 1;
-  cursor: pointer;
-  color: #0b3d91;
-  padding: 0;
-  transition: color 0.3s ease;
-}
-
-.tooltip-close:hover,
-.tooltip-close:focus {
-  color: #06326b;
-  outline: none;
-}
-
-/* Main content */
+/* ===== Main Content ===== */
 .main-content {
   display: flex;
   flex-direction: column;
@@ -139,6 +91,7 @@ input[type="text"]:focus {
   box-shadow: 0 0 8px rgba(11, 61, 145, 0.3);
 }
 
+/* ===== Buttons ===== */
 .button-row {
   display: flex;
   gap: 12px;
@@ -188,6 +141,7 @@ input[type="text"]:focus {
   outline: none;
 }
 
+/* Toggle options button */
 .toggle-options-btn {
   background-color: #f0f5fa;
   color: #0b3d91;
@@ -217,6 +171,7 @@ input[type="text"]:focus {
   transform: rotate(180deg);
 }
 
+/* QR code container */
 .qr-code-container {
   display: flex;
   justify-content: center;
@@ -228,6 +183,7 @@ input[type="text"]:focus {
   padding: 16px;
 }
 
+/* More options section */
 .more-options {
   margin-top: 12px;
   padding-top: 12px;
@@ -261,7 +217,7 @@ legend {
   color: #0b3d91;
 }
 
-/* Style radios */
+/* Radio buttons & labels */
 .fieldset-style label {
   cursor: pointer;
   user-select: none;
@@ -288,7 +244,7 @@ input[type="color"] {
   padding: 0;
 }
 
-/* Format select */
+/* Select dropdown */
 select {
   padding: 8px 12px;
   font-size: 1rem;
@@ -330,14 +286,8 @@ input[type="file"] {
 }
 
 .extra-spacing {
-  margin-top: 1em; /* adds vertical space above and below */
+  margin-top: 1em;
   margin-bottom: 1em;
-}
-
-/* Optional: slight spacing between icons and labels in style radios */
-.fieldset-style label i {
-  margin-right: 0.5em;
-  color: #333;
 }
 
 /* Screen reader only */
@@ -352,7 +302,7 @@ input[type="file"] {
   border: 0 !important;
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 520px) {
   .container {
     margin: 1rem 12px;
