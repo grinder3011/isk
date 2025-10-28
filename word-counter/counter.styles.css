@@ -38,7 +38,7 @@ header.header .tool-title {
 
 /* Back/Home button */
 .back-home-wrapper {
-  text-align: left;
+  text-align: center; /* Center the button horizontally */
   margin-bottom: 1rem;
 }
 
