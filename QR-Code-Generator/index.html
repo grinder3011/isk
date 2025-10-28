@@ -10,8 +10,14 @@
 </head>
 <body>
   <div class="container">
-    <header class="header">
-      <h1 class="tool-title">QR Code Generator</h1>
+
+    <!-- Header with title, back button, and description -->
+    <header class="tool-header">
+      <h1>🔳 QR Code Generator</h1>
+      <div class="back-home-wrapper">
+        <a href="https://grinder3011.github.io/isk/" class="back-home-link">← Back to Home</a>
+      </div>
+      <p>Generate custom QR codes for URLs, text, or any data, with optional styling and logos.</p>
     </header>
 
     <main class="main-content">
@@ -29,7 +35,7 @@
 
       <div id="qrcode" class="qr-code-container" aria-live="polite"></div>
 
-      <!-- Modular Tooltip Start -->
+      <!-- Tooltip trigger -->
       <button class="tooltip-toggle-btn" data-tooltip-target="qr-tip" aria-expanded="false" aria-controls="qr-tip">
         <i class="fas fa-lightbulb tooltip-icon"></i> How to use this tool?
       </button>
@@ -46,7 +52,6 @@
           <li>⬇️ Use the <em>Download</em> button to save the QR image.</li>
         </ul>
       </div>
-      <!-- Modular Tooltip End -->
 
       <button id="toggle-options-btn" class="btn toggle-options-btn" aria-expanded="false" aria-controls="more-options" type="button">
         <span class="options-label">More options</span>
@@ -74,7 +79,6 @@
           <legend>Colors</legend>
           <label for="color-dark">Dark Color</label>
           <input type="color" id="color-dark" value="#000000" />
-
           <label for="color-light">Light Color</label>
           <input type="color" id="color-light" value="#ffffff" />
         </fieldset>
@@ -99,7 +103,7 @@
         </button>
       </section>
     </main>
-  </div>
+  </div> <!-- /.container -->
 
   <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
   <script src="qr.js"></script>
