@@ -3,13 +3,33 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f9fafb;
   color: #222;
-  margin: 0; padding: 0;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   min-height: 100vh;
   padding: 1rem;
 }
 
+/* Full-width Header */
+.header {
+  width: 100%;
+  background: #4b6cb7;
+  color: white;
+  padding: 1.2rem 0;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  user-select: none;
+}
+
+.header .tool-title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin: 0;
+  color: white;
+}
+
+/* Container for page content */
 .container {
   max-width: 600px;
   width: 100%;
@@ -21,16 +41,31 @@ body {
   flex-direction: column;
 }
 
-.header {
-  text-align: center;
-  margin-bottom: 1.5rem;
+/* Back/Home button wrapper */
+.back-home-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
-.tool-title {
-  font-weight: 700;
-  font-size: 1.8rem;
-  color: #333;
-  user-select: none;
+.back-home-link {
+  background: #0078d4;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: background-color 0.25s;
+}
+
+.back-home-link:hover,
+.back-home-link:focus {
+  background: #005a9e;
+  outline: none;
 }
 
 /* Textarea */
@@ -45,12 +80,53 @@ body {
   box-sizing: border-box;
   font-family: inherit;
   margin-bottom: 1.5rem;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
+
 #text-input:focus {
   outline: none;
   border-color: #0078d4;
   box-shadow: 0 0 6px #0078d4aa;
+}
+
+/* Tooltip toggle button */
+.tooltip-toggle-btn {
+  display: block;
+  margin: 1.2rem auto;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  color: #4b6cb7;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+}
+
+.tooltip-toggle-btn:hover {
+  text-decoration: underline;
+}
+
+/* Tooltip box */
+.tooltip-box {
+  max-width: 700px;
+  margin: 1rem auto;
+  background: #e6f0ff;
+  border-left: 5px solid #4b6cb7;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  color: #1b2a7a;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  user-select: text;
+}
+
+.tooltip-box ul {
+  margin: 0.3rem 0 0 1.2rem;
+  padding: 0;
+}
+
+.tooltip-box li {
+  margin-bottom: 0.4rem;
 }
 
 /* Result Box */
@@ -71,6 +147,7 @@ body {
   gap: 0.5rem;
 }
 
+/* Result actions buttons */
 .result-actions {
   margin-top: 1rem;
   display: flex;
@@ -127,7 +204,7 @@ body {
   user-select: none;
 }
 
-/* Fieldset Groups */
+/* Fieldsets */
 .fieldset-options {
   border: 1px solid #ddd;
   border-radius: 6px;
@@ -146,7 +223,6 @@ body {
   gap: 0.5rem;
 }
 
-/* Labels inside fieldset */
 .fieldset-options label {
   display: block;
   margin-bottom: 0.5rem;
@@ -257,4 +333,19 @@ input[type="checkbox"] {
   overflow: hidden !important;
   clip: rect(0, 0, 0, 0) !important;
   border: 0 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .case-buttons {
+    flex-direction: column;
+  }
+
+  .original-text-actions .btn {
+    flex: 1 1 100%;
+  }
+
+  .container {
+    padding: 1rem;
+  }
 }
