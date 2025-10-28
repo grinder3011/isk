@@ -177,3 +177,21 @@ button:hover {
   text-align: left;
   box-shadow: 0 1px 3px rgba(26, 35, 126, 0.2);
 }
+
+/* ==== Back to homepage button styling ==== */
+.back-home-link {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 10px 0;
+    background-color: #007bff; /* Blue background */
+    color: #ffffff;            /* White text */
+    text-decoration: none;     /* Remove underline */
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-home-link:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
