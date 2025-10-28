@@ -4,11 +4,51 @@ body {
   background-color: #f7f9fc;
   color: #333;
   margin: 0;
-  padding: 1em;
+  padding: 0;
   line-height: 1.5;
 }
 
-/* Container for the converter */
+/* Full-width header */
+.tool-header {
+  width: 100%;
+  background-color: #0078d4;
+  color: white;
+  padding: 1.5em 1em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tool-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.logo-highlight {
+  color: #ffdd57; /* optional highlight color */
+}
+
+.back-home-wrapper {
+  margin-top: 0.5em;
+}
+
+.back-home-link {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.back-home-link:hover {
+  text-decoration: underline;
+}
+
+/* Centered main converter container */
 .converter-container {
   max-width: 600px;
   margin: 2em auto;
@@ -16,18 +56,6 @@ body {
   padding: 2em;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* Title */
-h1 {
-  text-align: center;
-  margin-bottom: 1.5em;
-  font-weight: 700;
-  font-size: 2rem;
-}
-
-.logo-highlight {
-  color: #0078d4;
 }
 
 /* Labels and inputs */
@@ -38,26 +66,6 @@ h1 {
   font-size: 1rem;
 }
 
-/* Align batch toggle label and checkbox horizontally, label before checkbox */
-.batch-toggle-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  margin: 1em 0;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  user-select: none;
-}
-
-.batch-toggle-wrapper input[type="checkbox"] {
-  order: 2; /* Put checkbox after label */
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
-}
-
-/* Inputs and selects styling */
 input[type="text"],
 textarea,
 select {
@@ -78,16 +86,30 @@ select:focus {
   outline: none;
 }
 
-/* Textarea resizing */
+/* Textarea */
 textarea {
   resize: vertical;
   min-height: 80px;
   font-family: monospace;
 }
 
-/* Hide elements with hidden class */
-.hidden {
-  display: none !important;
+/* Batch toggle */
+.batch-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 1em 0;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.batch-toggle-wrapper input[type="checkbox"] {
+  order: 2; 
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
 }
 
 /* Buttons container */
@@ -121,12 +143,12 @@ button:disabled {
   cursor: default;
 }
 
-/* Batch options section */
+/* Batch options */
 #batch-options {
   margin-top: 1em;
   display: flex;
-  flex-direction: column;        /* 🟢 NEW: stack items vertically */
-  align-items: stretch;          /* 🟢 NEW: full width */
+  flex-direction: column;
+  align-items: stretch;
   gap: 0.8em;
 }
 
@@ -137,11 +159,11 @@ button:disabled {
 
 #batch-options select,
 #batch-options button {
-  width: 100%;                   /* 🟢 NEW: prevent overflow */
+  width: 100%;
   box-sizing: border-box;
 }
 
-/* Copy button outside .buttons for better layout */
+/* Copy button */
 #copy-btn {
   margin-top: 1em;
   display: block;
@@ -153,7 +175,7 @@ button:disabled {
 
 /* Result box */
 .result {
-  white-space: pre-wrap; /* keep line breaks */
+  white-space: pre-wrap;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   padding: 12px;
@@ -194,7 +216,6 @@ button:disabled {
   color: #444;
 }
 
-/* Style tooltip lists */
 .tooltip-box ul {
   padding-left: 1.2em;
   margin: 0.5em 0 0 0;
@@ -204,8 +225,34 @@ button:disabled {
   margin-bottom: 0.5em;
 }
 
-/* Single and batch input labels hidden toggling */
+/* Single and batch input labels */
 .single-input-label,
 .batch-input-label {
   font-weight: 600;
+}
+
+/* Hidden elements */
+.hidden {
+  display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .converter-container {
+    margin: 1em 12px;
+    padding: 1.5em;
+  }
+
+  .buttons button,
+  #copy-btn {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .tool-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+    padding: 1em;
+  }
 }
