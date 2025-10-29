@@ -1,54 +1,60 @@
-// i18n.js
-let translations = {}; // will hold the currently loaded translation JSON
+// translations/i18n.js
 
-// Load translation JSON file
+let currentLang = 'en';
+let translations = null;
+
+// Load translations for a given language
 async function loadTranslations(lang) {
+  if (lang === 'en') {
+    // English: reset to default HTML text
+    translations = null;
+    applyTranslations();
+    return;
+  }
+
   try {
+    // Fetch the JSON file relative to this JS file
     const response = await fetch(`translations_${lang}.json`);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
     translations = await response.json();
-    updatePageText();
-  } catch (error) {
-    console.error("Could not load translations:", error);
+    applyTranslations();
+  } catch (err) {
+    console.error("Could not load translations:", err);
   }
 }
 
-// Update all elements with data-i18n / data-i18n-alt
-function updatePageText() {
-  // Elements with visible text
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
-    if (translations[key]) el.textContent = translations[key];
-  });
+// Apply translations to elements with data-i18n attributes
+function applyTranslations() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
 
-  // Elements with alt attributes (like images)
-  document.querySelectorAll("[data-i18n-alt]").forEach(el => {
-    const key = el.getAttribute("data-i18n-alt");
-    if (translations[key]) el.alt = translations[key];
-  });
-
-  // Optionally, update placeholders
-  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
-    const key = el.getAttribute("data-i18n-placeholder");
-    if (translations[key]) el.placeholder = translations[key];
-  });
-
-  // Optionally, update tooltips
-  document.querySelectorAll("[data-i18n-title]").forEach(el => {
-    const key = el.getAttribute("data-i18n-title");
-    if (translations[key]) el.title = translations[key];
+    if (translations && translations[key]) {
+      if (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea') {
+        el.placeholder = translations[key];
+      } else if (el.tagName.toLowerCase() === 'img' && el.hasAttribute('data-i18n-alt')) {
+        el.alt = translations[key];
+      } else {
+        el.textContent = translations[key];
+      }
+    } else if (el.hasAttribute('data-i18n-default')) {
+      // Optional: restore default text if specified
+      el.textContent = el.getAttribute('data-i18n-default');
+    }
+    // Otherwise leave the original HTML text (default English)
   });
 }
 
-// Language selector event listener
-document.addEventListener("DOMContentLoaded", () => {
-  const selector = document.getElementById("languageSelector");
-  if (!selector) return;
+// Initialize language selector (assumes there's a <select id="language-select">)
+document.addEventListener('DOMContentLoaded', () => {
+  const selector = document.querySelector('#language-select');
+  if (selector) {
+    selector.value = currentLang;
+    selector.addEventListener('change', e => {
+      currentLang = e.target.value;
+      loadTranslations(currentLang);
+    });
+  }
 
-  // Load default language (English)
-  loadTranslations(selector.value);
-
-  // Change language on selection
-  selector.addEventListener("change", (e) => {
-    loadTranslations(e.target.value);
-  });
+  // Apply default language on page load
+  loadTranslations(currentLang);
 });
