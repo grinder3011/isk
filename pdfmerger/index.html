@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Simple PDF Merger</title>
+  <title data-i18n="pdfmerger_page_title">Simple PDF Merger</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../tooltip.styles.css?v=3">
   <link rel="stylesheet" href="pdfmerger.styles.css" />
@@ -13,46 +13,46 @@
 
   <!-- Full-width header -->
   <header class="tool-header">
-    <h1>📄 Simple PDF Merger</h1>
-    <p>Upload and merge multiple PDF files quickly and easily.</p>
+    <h1 data-i18n="pdfmerger_header_title">📄 Simple PDF Merger</h1>
+    <p data-i18n="pdfmerger_header_subtitle">Upload and merge multiple PDF files quickly and easily.</p>
   </header>
 
   <!-- Back to home button under header -->
   <div class="back-home-wrapper">
-    <a href="https://grinder3011.github.io/isk/" class="back-home-link">← Back to Home</a>
+    <a href="https://grinder3011.github.io/isk/" class="back-home-link" data-i18n="back_home">← Back to Home</a>
   </div>
 
   <!-- Main content centered -->
   <div class="container">
 
     <!-- Drag & Drop Upload Area -->
-    <label id="drop-zone" for="file-input" tabindex="0" role="button" aria-label="Upload PDF files">
+    <label id="drop-zone" for="file-input" tabindex="0" role="button" aria-label="Upload PDF files" data-i18n-alt="pdfmerger_drop_zone_aria_label">
       <div class="drop-icon">📁⬆️</div>
-      <div class="drop-text">Drag & Drop or Click to Upload PDF files</div>
+      <div class="drop-text" data-i18n="pdfmerger_dropzone_text">Drag & Drop or Click to Upload PDF files</div>
     </label>
     <input type="file" id="file-input" accept="application/pdf" multiple hidden />
 
     <div id="preview-list" class="preview-list"></div>
 
     <div class="buttons">
-      <button id="merge-btn">🔗 Merge PDFs</button>
-      <button id="reset-btn">🔄 Reset</button>
-      <button id="download-btn" style="display: none">⬇️ Download</button>
+      <button id="merge-btn" data-i18n="pdfmerger_btn_merge">🔗 Merge PDFs</button>
+      <button id="reset-btn" data-i18n="pdfmerger_btn_reset">🔄 Reset</button>
+      <button id="download-btn" style="display: none" data-i18n="pdfmerger_btn_download">⬇️ Download</button>
     </div>
 
     <!-- Accordion / Tooltip container -->
     <div class="accordion-container">
       <button class="tooltip-toggle-btn" data-tooltip-target="json-tip" aria-expanded="false" aria-controls="json-tip">
-        <i class="fas fa-lightbulb tooltip-icon"></i> How to use this tool?
+        <i class="fas fa-lightbulb tooltip-icon"></i> <span data-i18n="pdfmerger_tooltip_how_to_use">How to use this tool?</span>
       </button>
 
       <div id="json-tip" class="tooltip-box hidden" aria-live="polite">
-        <p>💡 <strong>How to use this tool:</strong></p>
+        <p>💡 <strong data-i18n="pdfmerger_tooltip_title">How to use this tool:</strong></p>
         <ul>
-          <li>📁 Drag & drop or select multiple PDF files to upload them.</li>
-          <li>🔗 Click <em>Merge PDFs</em> to combine them into one file.</li>
-          <li>⬇️ Once merged, click <em>Download</em> to save your PDF.</li>
-          <li>🔄 Use <em>Reset</em> to start over.</li>
+          <li data-i18n="pdfmerger_tooltip_step_upload">📁 Drag & drop or select multiple PDF files to upload them.</li>
+          <li data-i18n="pdfmerger_tooltip_step_merge">🔗 Click <em>Merge PDFs</em> to combine them into one file.</li>
+          <li data-i18n="pdfmerger_tooltip_step_download">⬇️ Once merged, click <em>Download</em> to save your PDF.</li>
+          <li data-i18n="pdfmerger_tooltip_step_reset">🔄 Use <em>Reset</em> to start over.</li>
         </ul>
       </div>
     </div>
@@ -62,9 +62,9 @@
   <!-- Modals for mobile -->
   <div id="usage-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="usage-toggle">
     <div class="modal-content">
-      <button class="modal-close" aria-label="Close">&times;</button>
-      <h2>How to use this tool</h2>
-      <p>
+      <button class="modal-close" aria-label="Close" data-i18n-alt="pdfmerger_modal_close">&times;</button>
+      <h2 data-i18n="pdfmerger_modal_title">How to use this tool</h2>
+      <p data-i18n="pdfmerger_modal_text">
         Drag and drop your PDFs into the upload area, or click to select files.
         Then, click <strong>Merge PDFs</strong>. When the merge is done, you can download the result.
         Use <strong>Reset</strong> to clear everything.
