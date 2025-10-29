@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Word & Character Counter +</title>
+  <title data-i18n="counter_page_title">Word & Character Counter +</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../tooltip.styles.css?v=3">
   <link rel="stylesheet" href="counter.styles.css?v=4" />
@@ -12,7 +12,7 @@
 
   <!-- Full-width header -->
   <header class="header">
-    <h1 class="tool-title">Word & Character Counter +</h1>
+    <h1 class="tool-title" data-i18n="counter_header_title">Word & Character Counter +</h1>
   </header>
 
   <!-- Centered container for the rest of the content -->
@@ -20,83 +20,83 @@
 
     <!-- Back/Home button -->
     <div class="back-home-wrapper">
-      <a href="../index.html" class="back-home-link">← Back to Home</a>
+      <a href="../index.html" class="back-home-link" data-i18n="back_home">← Back to Home</a>
     </div>
 
     <main class="main-content">
-      <label for="text-input" class="sr-only">Enter your text to analyze</label>
-      <textarea id="text-input" placeholder="Start typing or paste your text here..." rows="8" aria-describedby="text-desc"></textarea>
-      <div id="text-desc" class="sr-only">Input your text to count words and characters</div>
+      <label for="text-input" class="sr-only" data-i18n="counter_label_text_input">Enter your text to analyze</label>
+      <textarea id="text-input" placeholder="Start typing or paste your text here..." rows="8" aria-describedby="text-desc" data-i18n-placeholder="counter_placeholder_text"></textarea>
+      <div id="text-desc" class="sr-only" data-i18n="counter_text_desc">Input your text to count words and characters</div>
   
       <!-- Tooltip trigger -->
       <button class="tooltip-toggle-btn" data-tooltip-target="json-tip" aria-expanded="false" aria-controls="json-tip">
-        <i class="fas fa-lightbulb tooltip-icon"></i> How to use this tool?
+        <i class="fas fa-lightbulb tooltip-icon"></i> <span data-i18n="counter_tooltip_button">How to use this tool?</span>
       </button>
       
       <!-- Tooltip content -->
       <div id="json-tip" class="tooltip-box hidden" aria-live="polite">
-        <p>💡 <strong>How to use Word & Character Counter +:</strong></p>
+        <p>💡 <strong data-i18n="counter_tooltip_title">How to use Word & Character Counter +:</strong></p>
         <ul>
-          <li>✍️ Type or paste your text in the box above to start analysis.</li>
-          <li>📊 The tool counts words, characters (with and without spaces), sentences, and unique words.</li>
-          <li>Use <i class="fas fa-cogs"></i> <strong>More options</strong> to customize counting behavior.</li>
-          <li>🔠 Easily convert text case with UPPERCASE, lowercase, or Title Case buttons.</li>
-          <li>📋 Copy or ⬇️ download results or original text.</li>
-          <li>↩️ Hit <i class="fas fa-undo"></i> Reset to clear everything.</li>
+          <li data-i18n="counter_tooltip_step1">✍️ Type or paste your text in the box above to start analysis.</li>
+          <li data-i18n="counter_tooltip_step2">📊 The tool counts words, characters (with and without spaces), sentences, and unique words.</li>
+          <li data-i18n="counter_tooltip_step3">Use <i class="fas fa-cogs"></i> <strong>More options</strong> to customize counting behavior.</li>
+          <li data-i18n="counter_tooltip_step4">🔠 Easily convert text case with UPPERCASE, lowercase, or Title Case buttons.</li>
+          <li data-i18n="counter_tooltip_step5">📋 Copy or ⬇️ download results or original text.</li>
+          <li data-i18n="counter_tooltip_step6">↩️ Hit <i class="fas fa-undo"></i> Reset to clear everything.</li>
         </ul>
       </div>
 
       <!-- Result Box -->
       <section class="result-box">
-        <h2>Results</h2>
-        <p><i class="fas fa-file-alt"></i> <strong>Words:</strong> <span id="word-count">0</span></p>
-        <p><i class="fas fa-keyboard"></i> <strong>Characters:</strong> <span id="char-count">0</span></p>
-        <p><i class="fas fa-ban"></i> <strong>Characters (without spaces):</strong> <span id="char-nospace-count">0</span></p>
-        <p><i class="fas fa-quote-left"></i> <strong>Sentences:</strong> <span id="sentence-count">-</span></p>
-        <p><i class="fas fa-atom"></i> <strong>Unique words:</strong> <span id="unique-word-count">0</span></p>
+        <h2 data-i18n="counter_results_heading">Results</h2>
+        <p><i class="fas fa-file-alt"></i> <strong data-i18n="counter_words_label">Words:</strong> <span id="word-count">0</span></p>
+        <p><i class="fas fa-keyboard"></i> <strong data-i18n="counter_chars_label">Characters:</strong> <span id="char-count">0</span></p>
+        <p><i class="fas fa-ban"></i> <strong data-i18n="counter_chars_no_spaces_label">Characters (without spaces):</strong> <span id="char-nospace-count">0</span></p>
+        <p><i class="fas fa-quote-left"></i> <strong data-i18n="counter_sentences_label">Sentences:</strong> <span id="sentence-count">-</span></p>
+        <p><i class="fas fa-atom"></i> <strong data-i18n="counter_unique_label">Unique words:</strong> <span id="unique-word-count">0</span></p>
 
         <div class="result-actions">
-          <button id="copy-results" class="btn action-btn" title="Copy Results"><i class="fas fa-copy"></i></button>
-          <button id="download-results" class="btn action-btn" title="Download Results"><i class="fas fa-download"></i></button>
+          <button id="copy-results" class="btn action-btn" title="Copy Results" data-i18n-title="counter_copy_results_title"><i class="fas fa-copy"></i></button>
+          <button id="download-results" class="btn action-btn" title="Download Results" data-i18n-title="counter_download_results_title"><i class="fas fa-download"></i></button>
         </div>
       </section>
 
       <!-- More options toggle -->
       <button id="toggle-options-btn" class="btn toggle-options-btn" aria-expanded="false" aria-controls="more-options">
         <i class="fas fa-cogs"></i>
-        <span class="options-label">More options</span>
+        <span class="options-label" data-i18n="counter_more_options_label">More options</span>
         <i class="fas fa-chevron-down arrow"></i>
       </button>
 
       <!-- More options panel -->
       <section id="more-options" class="more-options" hidden>
         <fieldset class="fieldset-options">
-          <legend><i class="fas fa-cogs"></i> Counting Options</legend>
-          <label><input type="checkbox" id="include-spaces" checked /> Count spaces</label>
-          <label><input type="checkbox" id="ignore-punctuation" /> Ignore punctuation</label>
-          <label><input type="checkbox" id="count-sentences" /> Enable sentence count</label>
+          <legend><i class="fas fa-cogs"></i> <span data-i18n="counter_counting_options">Counting Options</span></legend>
+          <label><input type="checkbox" id="include-spaces" checked /> <span data-i18n="counter_count_spaces">Count spaces</span></label>
+          <label><input type="checkbox" id="ignore-punctuation" /> <span data-i18n="counter_ignore_punct">Ignore punctuation</span></label>
+          <label><input type="checkbox" id="count-sentences" /> <span data-i18n="counter_enable_sentences">Enable sentence count</span></label>
         </fieldset>
 
         <fieldset class="fieldset-options">
-          <legend><i class="fas fa-filter"></i> Unique Word Filters</legend>
-          <label><input type="checkbox" id="filter-1-letter" /> Exclude 1-letter words</label>
-          <label><input type="checkbox" id="filter-2-letter" /> Exclude 2-letter words</label>
+          <legend><i class="fas fa-filter"></i> <span data-i18n="counter_unique_filters">Unique Word Filters</span></legend>
+          <label><input type="checkbox" id="filter-1-letter" /> <span data-i18n="counter_exclude_1_letter">Exclude 1-letter words</span></label>
+          <label><input type="checkbox" id="filter-2-letter" /> <span data-i18n="counter_exclude_2_letter">Exclude 2-letter words</span></label>
         </fieldset>
 
         <fieldset class="fieldset-options">
-          <legend><i class="fas fa-file-word"></i> Original Text Tools</legend>
+          <legend><i class="fas fa-file-word"></i> <span data-i18n="counter_original_tools">Original Text Tools</span></legend>
           <div class="case-buttons">
-            <button id="to-uppercase" class="btn case-btn" title="Convert to UPPERCASE"><i class="fas fa-arrow-up"></i> UPPERCASE</button>
-            <button id="to-lowercase" class="btn case-btn" title="Convert to lowercase"><i class="fas fa-arrow-down"></i> lowercase</button>
-            <button id="to-titlecase" class="btn case-btn" title="Convert to Title Case"><i class="fas fa-capsules"></i> Title Case</button>
+            <button id="to-uppercase" class="btn case-btn" title="Convert to UPPERCASE" data-i18n="counter_uppercase_btn"><i class="fas fa-arrow-up"></i> UPPERCASE</button>
+            <button id="to-lowercase" class="btn case-btn" title="Convert to lowercase" data-i18n="counter_lowercase_btn"><i class="fas fa-arrow-down"></i> lowercase</button>
+            <button id="to-titlecase" class="btn case-btn" title="Convert to Title Case" data-i18n="counter_titlecase_btn"><i class="fas fa-capsules"></i> Title Case</button>
           </div>
           <div class="original-text-actions">
-            <button id="copy-original" class="btn action-btn"><i class="fas fa-copy"></i> Copy Original</button>
-            <button id="download-original" class="btn action-btn"><i class="fas fa-download"></i> Download Original</button>
+            <button id="copy-original" class="btn action-btn" data-i18n="counter_copy_original"><i class="fas fa-copy"></i> Copy Original</button>
+            <button id="download-original" class="btn action-btn" data-i18n="counter_download_original"><i class="fas fa-download"></i> Download Original</button>
           </div>
         </fieldset>
 
-        <button id="reset-btn" class="btn reset-btn extra-spacing"><i class="fas fa-undo"></i> Reset</button>
+        <button id="reset-btn" class="btn reset-btn extra-spacing" data-i18n="counter_reset_btn"><i class="fas fa-undo"></i> Reset</button>
       </section>
     </main>
   </div>
