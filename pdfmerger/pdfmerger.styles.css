@@ -1,45 +1,37 @@
 /* ===== General Page Styling ===== */
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    padding: 2rem;
-    background-color: #f8f9fa;
+    padding: 1em;
+    background: #f7f9fc;
     color: #333;
 }
 
-/* Container: wider, more airy like other tools */
-.container {
-    max-width: 90%;
-    margin: 1rem auto;
-    padding: 2.5rem;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
-}
-
-/* Large tool header */
+/* Full-width header */
 .tool-header {
+    width: 100%;
     text-align: center;
-    margin-bottom: 2rem;
+    background: #4b6cb7;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2em;
 }
 
 .tool-header h1 {
-    font-size: 2.8rem;
-    margin-bottom: 0.5rem;
-    color: #007bff;
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
 }
 
 .tool-header p {
     font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
+    color: #e0e0e0;
 }
 
-/* Centered Back to Home button */
+/* Back to home button below title */
 .back-home-wrapper {
-    display: flex;
-    justify-content: center;
-    margin: 15px 0;
+    margin: 0.5em 0 1em 0;
 }
 
 .back-home-link {
@@ -51,325 +43,133 @@ body {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    text-align: center;
-    white-space: nowrap;
 }
 
 .back-home-link:hover {
     background-color: #0056b3;
 }
 
-/* === Drag & Drop Upload Area === */
+/* ===== Centered main content ===== */
+.tool-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+/* Drag & Drop area */
 #drop-zone {
-    border: 2px dashed #007bff;
-    border-radius: 8px;
-    padding: 2rem;
-    text-align: center;
-    color: #007bff;
-    cursor: pointer;
-    user-select: none;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
+    justify-content: center;
+    padding: 2em;
+    border: 2px dashed #0078d4;
+    border-radius: 10px;
+    background: #f4f7fa;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    text-align: center;
 }
 
+#drop-zone:hover,
 #drop-zone:focus {
-    outline: 3px solid #0056b3;
-    outline-offset: 3px;
-}
-
-#drop-zone.dragover {
-    background-color: #e0f0ff;
-    border-color: #0056b3;
+    background-color: #eaf0f8;
+    border-color: #005fa3;
+    outline: none;
 }
 
 .drop-icon {
-    font-size: 3rem;
-    line-height: 1;
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
 }
 
 .drop-text {
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-
-/* === Preview list === */
-.preview-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.preview-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1 1 120px;
-    border: 1px solid #ccc;
-    background: #f1f1f1;
-    padding: 0.5rem 0.75rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    word-break: break-word;
-    cursor: grab;
-    user-select: none;
-    min-width: 150px;
-    transition: transform 0.2s ease, background-color 0.3s ease;
-}
-
-.preview-item.dragging {
-    opacity: 0.6;
-    cursor: grabbing;
-}
-
-.preview-item.dragover {
-    border-color: #007bff;
-    background-color: #d0e8ff;
-}
-
-.preview-item.selected {
-    background-color: #cce5ff;
-    border-color: #007bff;
-}
-
-.preview-item:hover {
-    cursor: grab;
-}
-
-.file-name {
-    flex-grow: 1;
-    margin-right: 0.5rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.remove-btn {
-    background: none;
-    border: none;
-    color: #dc3545;
-    font-weight: 700;
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 0;
-    line-height: 1;
-    transition: color 0.3s ease;
-    flex-shrink: 0;
-    width: 24px;
-    height: 24px;
-    text-align: center;
-}
-
-.remove-btn:hover,
-.remove-btn:focus {
-    color: #a71d2a;
-    outline: none;
-}
-
-/* Buttons container */
-.buttons {
-    display: flex;
-    justify-content: center; /* center buttons horizontally */
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-/* === Button Styling === */
-button {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.6rem 1.2rem;
     font-size: 1rem;
-    background-color: #007bff;
-    border: none;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: inherit;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-#reset-btn {
-    background-color: #6c757d;
-}
-
-#reset-btn:hover {
-    background-color: #545b62;
-}
-
-#merge-btn {
-    background-color: #007bff;
-}
-
-#merge-btn:hover {
-    background-color: #0056b3;
-}
-
-#download-btn {
-    background-color: #28a745;
-}
-
-#download-btn:hover {
-    background-color: #218838;
-}
-
-button:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
-#output {
-    text-align: center;
-    margin-top: 1rem;
-}
-
-#output a {
-    display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.6rem 1.2rem;
-    background-color: #28a745;
-    color: white;
-    font-size: 1rem;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-#output a:hover,
-#output a:focus {
-    background-color: #218838;
-    outline: none;
-}
-
-#output a::before {
-    content: "⬇️ ";
-}
-
-/* Accordion container for vertical stacking */
-.accordion-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-/* Tooltip toggles */
-.tooltip-toggle-btn {
-    background: none;
-    color: #007bff;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
-    text-align: left;
-    transition: color 0.3s ease;
-}
-
-.tooltip-toggle-btn:hover,
-.tooltip-toggle-btn:focus {
-    color: #0056b3;
-    text-decoration: underline;
-    outline: none;
-}
-
-/* Modal styles */
-.modal[hidden] {
-    display: none !important;
-}
-
-.modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 9999;
-    padding: 1rem;
-    overflow-y: auto;
-}
-
-.modal-content {
-    max-height: 80vh;
-    overflow-y: auto;
-    background: white;
-    max-width: 500px;
-    width: 100%;
-    padding: 1.5rem 2rem;
-    border-radius: 8px;
-    position: relative;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
     color: #333;
 }
 
-.modal-close {
-    position: absolute;
-    top: 0.4rem;
-    right: 0.7rem;
-    font-size: 1.8rem;
-    border: none;
-    background: none;
-    cursor: pointer;
-    color: #666;
-    font-weight: 700;
-    line-height: 1;
-    transition: color 0.3s ease;
+/* Preview list of uploaded files */
+.preview-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
-.modal-close:hover,
-.modal-close:focus {
-    color: #000;
-    outline: none;
+.preview-list div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px;
+    background: #f0f4f8;
+    border-radius: 6px;
+    font-size: 0.95rem;
 }
 
-/* Prevent background scroll when modal open */
-body.modal-open {
+.preview-list div span {
+    flex-grow: 1;
     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-/* Swap animation */
-.swap-animate {
-    animation: swapPulse 0.3s ease forwards;
-    background-color: #cce5ff;
-    border-color: #007bff;
+.preview-list div button {
+    background: transparent;
+    border: none;
+    color: #d33;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: color 0.2s ease;
 }
 
-@keyframes swapPulse {
-    0% { transform: scale(1); background-color: #cce5ff; border-color: #007bff; }
-    50% { transform: scale(1.05); background-color: #99ccff; border-color: #0056b3; }
-    100% { transform: scale(1); background-color: #cce5ff; border-color: #007bff; }
+.preview-list div button:hover {
+    color: #a00;
 }
 
-/* ===== Responsive Tweaks ===== */
-@media (max-width: 767px) {
-    .buttons {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
+/* ===== Buttons ===== */
+.actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
 
-    button {
-        width: 100%;
-    }
+.actions button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background: #0078d4;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    min-width: 140px;
+    transition: 0.2s ease;
+}
 
-    .accordion-container {
-        gap: 2.5rem;
-    }
+.actions button:hover {
+    background: #005fa3;
+}
 
-    .preview-item {
-        min-width: 100%;
-    }
+/* Tooltip section */
+.tooltip-toggle-btn {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
 
-    #drop-zone {
-        padding: 1.25rem;
+.tooltip-box {
+    max-width: 500px;
+    margin: 1em auto;
+    text-align: left;
+}
+
+/* ===== Responsive adjustments ===== */
+@media (max-width: 600px) {
+    .tool-wrapper {
+        max-width: 95%;
+        padding: 0.5em;
     }
 
     .tool-header h1 {
@@ -377,6 +177,19 @@ body.modal-open {
     }
 
     .tool-header p {
-        font-size: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .drop-icon {
+        font-size: 2rem;
+    }
+
+    .drop-text {
+        font-size: 0.95rem;
+    }
+
+    .actions button {
+        flex: 1 1 100%;
+        min-width: 0;
     }
 }
