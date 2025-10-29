@@ -5,20 +5,16 @@ body {
     padding: 1em;
     background: #f7f9fc;
     color: #333;
+    text-align: center; /* ensures content defaults to center for small elements */
 }
 
-/* Container styling: wider and more airy */
-.container {
-    max-width: 90%;
-    margin: 1em auto;
-    background: #fff;
-    padding: 2.5em;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
-}
-
-/* Header with large title */
+/* Full-width header */
 .tool-header {
+    width: 100%;
+    background-color: #4b6cb7; /* optional: colored header for distinction */
+    color: white;
+    padding: 2em 1em;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     text-align: center;
     margin-bottom: 2em;
 }
@@ -30,8 +26,42 @@ body {
 
 .tool-header p {
     font-size: 1.1rem;
-    color: #555;
+    color: #eef3fb; /* lighter text on colored header */
     margin-bottom: 1.5em;
+}
+
+/* Back to homepage button inside header */
+.back-home-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.back-home-link {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.back-home-link:hover {
+    background-color: #0056b3;
+}
+
+/* Container styling: centered, below header */
+.container {
+    max-width: 90%;
+    margin: 0 auto 2em;
+    background: #fff;
+    padding: 2.5em;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
 }
 
 /* Tool wrapper fills container */
@@ -138,32 +168,8 @@ input[type="file"] {
     background: #005fa3;
 }
 
-/* ===== Back to homepage button ===== */
-.back-home-wrapper {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.back-home-link {
-    display: inline-block;
-    padding: 10px 16px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    text-align: center;
-    white-space: nowrap;
-}
-
-.back-home-link:hover {
-    background-color: #0056b3;
-}
-
 /* Mobile adjustments */
-@media (max-width: 400px) {
+@media (max-width: 600px) {
     .back-home-link {
         padding: 8px 12px;
         font-size: 0.9rem;
@@ -175,5 +181,14 @@ input[type="file"] {
 
     .tool-header p {
         font-size: 1rem;
+    }
+
+    .container {
+        padding: 1.5em;
+    }
+
+    .actions button {
+        flex: 1 1 100%;
+        min-width: unset;
     }
 }
