@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Simple Image Cropper Tool</title>
+  <title data-i18n="cropper.title">Simple Image Cropper Tool</title>
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../tooltip.styles.css?v=3">
@@ -13,71 +13,71 @@
 
   <!-- Full-width header -->
   <header class="tool-header">
-    <h1>🖼️ Simple Image Cropper</h1>
+    <h1 data-i18n="cropper.header">🖼️ Simple Image Cropper</h1>
   </header>
 
   <!-- Back/Home button -->
   <div class="back-home-wrapper">
-    <a href="../index.html" class="back-home-link">← Back to Home</a>
+    <a href="../index.html" class="back-home-link" data-i18n="cropper.backHome">← Back to Home</a>
   </div>
 
   <!-- Main content wrapper like other tools -->
   <div class="main-content">
 
     <!-- File input -->
-    <input type="file" id="imageInput" accept="image/*" />
+    <input type="file" id="imageInput" accept="image/*" title="Upload Image" data-i18n-placeholder="cropper.upload" />
 
     <!-- Top controls -->
     <div class="controls-wrapper">
       <div class="controls-row">
-        <button id="drawCropBtn">✏️ Draw new crop area</button>
-        <button id="clearCropBtn" disabled>🧹 Clear crop area</button>
+        <button id="drawCropBtn" data-i18n="cropper.drawCrop">✏️ Draw new crop area</button>
+        <button id="clearCropBtn" disabled data-i18n="cropper.clearCrop">🧹 Clear crop area</button>
       </div>
       <div class="controls-row">
-        <button id="zoomInBtn" title="Zoom In">🔍➕ Zoom In</button>
-        <button id="zoomOutBtn" title="Zoom Out">🔍➖ Zoom Out</button>
+        <button id="zoomInBtn" title="Zoom In" data-i18n="cropper.zoomIn">🔍➕ Zoom In</button>
+        <button id="zoomOutBtn" title="Zoom Out" data-i18n="cropper.zoomOut">🔍➖ Zoom Out</button>
       </div>
     </div>
 
     <!-- Tooltip -->
-    <button class="tooltip-toggle-btn" data-tooltip-target="json-tip" aria-expanded="false" aria-controls="json-tip">
+    <button class="tooltip-toggle-btn" data-tooltip-target="json-tip" aria-expanded="false" aria-controls="json-tip" data-i18n="cropper.howToTitle">
       <i class="fas fa-lightbulb tooltip-icon"></i> How to use this tool?
     </button>
 
     <div id="json-tip" class="tooltip-box hidden" aria-live="polite">
-      <p>💡 <strong>How to use this tool:</strong></p>
+      <p>💡 <strong data-i18n="cropper.howToHeader">How to use this tool:</strong></p>
       <ul>
-        <li>📂 <strong>Upload an image</strong> using the file input at the top of the page.</li>
-        <li>✏️ Click <strong>"Draw new crop area"</strong> to select the region you want to crop.</li>
-        <li>🧹 Use <strong>"Clear crop area"</strong> if you want to reset and draw a new one.</li>
-        <li>🔍 Use <strong>Zoom In</strong> (➕) and <strong>Zoom Out</strong> (➖) to adjust the image view if needed.</li>
-        <li>✂️ Once you're happy, click <strong>"Crop"</strong> to preview your selection.</li>
-        <li>🗂️ Choose your desired format (<strong>PNG</strong> or <strong>JPEG</strong>) from the dropdown.</li>
-        <li>⬇️ Finally, click <strong>"Download"</strong> to save your cropped image.</li>
+        <li data-i18n="cropper.step1">📂 <strong>Upload an image</strong> using the file input at the top of the page.</li>
+        <li data-i18n="cropper.step2">✏️ Click <strong>"Draw new crop area"</strong> to select the region you want to crop.</li>
+        <li data-i18n="cropper.step3">🧹 Use <strong>"Clear crop area"</strong> if you want to reset and draw a new one.</li>
+        <li data-i18n="cropper.step4">🔍 Use <strong>Zoom In</strong> (➕) and <strong>Zoom Out</strong> (➖) to adjust the image view if needed.</li>
+        <li data-i18n="cropper.step5">✂️ Once you're happy, click <strong>"Crop"</strong> to preview your selection.</li>
+        <li data-i18n="cropper.step6">🗂️ Choose your desired format (<strong>PNG</strong> or <strong>JPEG</strong>) from the dropdown.</li>
+        <li data-i18n="cropper.step7">⬇️ Finally, click <strong>"Download"</strong> to save your cropped image.</li>
       </ul>
     </div>
 
     <!-- Cropper container -->
     <div class="cropper-container">
-      <img id="image" alt="Upload an image to crop" />
+      <img id="image" alt="Upload an image to crop" data-i18n-alt="cropper.imageAlt" />
       <div id="cropArea"></div>
     </div>
 
     <!-- Bottom controls -->
     <div class="controls-wrapper">
       <div class="controls-row">
-        <button id="cropBtn" disabled>✂️ Crop</button>
-        <select id="downloadFormatSelect">
-          <option value="image/png">🗂️ PNG</option>
-          <option value="image/jpeg">🗂️ JPEG</option>
+        <button id="cropBtn" disabled data-i18n="cropper.crop">✂️ Crop</button>
+        <select id="downloadFormatSelect" data-i18n="cropper.format">
+          <option value="image/png" data-i18n="cropper.formatPNG">🗂️ PNG</option>
+          <option value="image/jpeg" data-i18n="cropper.formatJPEG">🗂️ JPEG</option>
         </select>
-        <button id="downloadBtn" disabled>⬇️ Download</button>
+        <button id="downloadBtn" disabled data-i18n="cropper.download">⬇️ Download</button>
       </div>
     </div>
 
     <!-- Result -->
     <div id="resultContainer">
-      <h2>Cropped Result:</h2>
+      <h2 data-i18n="cropper.resultHeader">Cropped Result:</h2>
       <canvas id="resultCanvas"></canvas>
     </div>
 
