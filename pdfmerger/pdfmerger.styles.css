@@ -1,50 +1,42 @@
-/* ===== General Page Styling ===== */
+/* ===== Base Reset & Typography ===== */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    padding: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f7f9fc;
     color: #333;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
 }
 
-/* Container styling */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 2em;
-    border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+h1, h2 {
+    margin: 0.5rem 0 1rem;
+    color: #222;
 }
 
-/* Header with large title */
+/* ===== Full-Width Header ===== */
 .tool-header {
     width: 100%;
-    text-align: center;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
+    background: #4b6cb7;
+    color: #fff;
+    padding: 20px 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .tool-header h1 {
     font-size: 2.5rem;
-    margin-bottom: 0.5em;
+    font-weight: bold;
 }
 
 .tool-header p {
     font-size: 1.1rem;
-    color: #555;
-    margin: 0;
+    color: #e0e6f1;
+    margin-top: 0.5rem;
 }
 
-/* Back to Home Button */
+/* ===== Back to Home Button ===== */
 .back-home-wrapper {
     display: flex;
     justify-content: center;
-    width: 100%;
     margin: 15px 0;
 }
 
@@ -57,55 +49,64 @@ body {
     border-radius: 6px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    text-align: center;
 }
 
 .back-home-link:hover {
     background-color: #0056b3;
 }
 
-/* Tool wrapper to center main content */
-.tool-wrapper {
-    width: 100%;
-    max-width: 600px;
+/* ===== Main Content Container ===== */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
 }
 
-/* Drag & Drop Area */
+/* ===== Drag & Drop Area ===== */
 #drop-zone {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px dashed #bbb;
+    border: 2px dashed #4b6cb7;
     border-radius: 10px;
     padding: 40px 20px;
     cursor: pointer;
-    text-align: center;
-    transition: border-color 0.3s, background-color 0.2s;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    background: #f9fbff;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 #drop-zone:hover,
 #drop-zone:focus {
-    border-color: #007bff;
     background-color: #f0f4ff;
+    border-color: #0056b3;
+    outline: none;
 }
 
 .drop-icon {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
 .drop-text {
     font-size: 1rem;
+    color: #333;
 }
 
-/* Preview List */
+/* ===== Preview List ===== */
 .preview-list {
     width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
 }
 
 .preview-list div {
@@ -114,37 +115,38 @@ body {
     align-items: center;
     background: #f4f7fa;
     padding: 8px 12px;
+    margin-bottom: 8px;
     border-radius: 6px;
-    margin-bottom: 6px;
+    font-size: 0.95rem;
 }
 
 .preview-list div span {
-    flex-grow: 1;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-grow: 1;
 }
 
 .preview-list div button {
     background: transparent;
     border: none;
     color: #d33;
+    font-size: 1.2rem;
     cursor: pointer;
-    font-size: 1.2em;
-    transition: color 0.2s;
+    transition: color 0.2s ease;
 }
 
 .preview-list div button:hover {
     color: #a00;
 }
 
-/* Buttons */
+/* ===== Buttons ===== */
 .buttons {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 12px;
-    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .buttons button {
@@ -154,7 +156,7 @@ body {
     border-radius: 6px;
     cursor: pointer;
     min-width: 140px;
-    transition: background-color 0.25s;
+    transition: background-color 0.25s ease;
 }
 
 #merge-btn {
@@ -163,7 +165,7 @@ body {
 }
 
 #merge-btn:hover {
-    background-color: #005fa3;
+    background-color: #005ea3;
 }
 
 #reset-btn {
@@ -184,43 +186,36 @@ body {
     background-color: #1e7e34;
 }
 
-/* Tooltip Button */
+/* ===== Tooltip ===== */
 .tooltip-toggle-btn {
     display: block;
-    margin: 20px auto;
-    text-align: center;
+    margin: 0 auto 20px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: #4b6cb7;
+    font-size: 1rem;
 }
 
-/* Tooltip box */
+.tooltip-toggle-btn:hover {
+    text-decoration: underline;
+}
+
 .tooltip-box {
     max-width: 500px;
-    margin: 10px auto;
-    background: #e6f0ff;
-    border-left: 5px solid #0078d4;
-    padding: 10px 12px;
+    margin: 0 auto 20px;
+    text-align: left;
+    background-color: #e6f0ff;
+    border-left: 5px solid #4b6cb7;
+    padding: 10px 15px;
     border-radius: 6px;
     color: #1b2a7a;
     font-size: 0.95rem;
     line-height: 1.4;
-    display: none;
 }
 
-.tooltip-box ul {
-    padding-left: 1.2em;
-    margin: 0.5em 0 0 0;
-}
-
-.tooltip-box li {
-    margin-bottom: 0.4em;
-}
-
-/* Responsive adjustments */
+/* ===== Responsive ===== */
 @media (max-width: 600px) {
-    .tool-wrapper {
-        max-width: 100%;
-        padding: 0 10px;
-    }
-
     .tool-header h1 {
         font-size: 2rem;
     }
@@ -229,12 +224,12 @@ body {
         font-size: 1rem;
     }
 
-    .back-home-link {
-        padding: 8px 12px;
-        font-size: 0.9rem;
+    #drop-zone {
+        padding: 30px 15px;
     }
 
-    #drop-zone {
-        padding: 30px 10px;
+    .buttons button {
+        flex: 1 1 100%;
+        min-width: unset;
     }
 }
