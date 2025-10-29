@@ -17,13 +17,13 @@
     <p>Upload and merge multiple PDF files quickly and easily.</p>
   </header>
 
-  <!-- Back to home button (outside header) -->
+  <!-- Back to home button under header -->
   <div class="back-home-wrapper">
     <a href="https://grinder3011.github.io/isk/" class="back-home-link">← Back to Home</a>
   </div>
 
-  <!-- Centered main container -->
-  <div class="tool-wrapper">
+  <!-- Main content centered -->
+  <div class="container">
 
     <!-- Drag & Drop Upload Area -->
     <label id="drop-zone" for="file-input" tabindex="0" role="button" aria-label="Upload PDF files">
@@ -34,14 +34,13 @@
 
     <div id="preview-list" class="preview-list"></div>
 
-    <!-- Action buttons -->
-    <div class="actions">
+    <div class="buttons">
       <button id="merge-btn">🔗 Merge PDFs</button>
       <button id="reset-btn">🔄 Reset</button>
       <button id="download-btn" style="display: none">⬇️ Download</button>
     </div>
 
-    <!-- Tooltip -->
+    <!-- Accordion / Tooltip container -->
     <div class="accordion-container">
       <button class="tooltip-toggle-btn" data-tooltip-target="json-tip" aria-expanded="false" aria-controls="json-tip">
         <i class="fas fa-lightbulb tooltip-icon"></i> How to use this tool?
@@ -58,7 +57,20 @@
       </div>
     </div>
 
-  </div> <!-- /.tool-wrapper -->
+  </div> <!-- /.container -->
+
+  <!-- Modals for mobile -->
+  <div id="usage-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="usage-toggle">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <h2>How to use this tool</h2>
+      <p>
+        Drag and drop your PDFs into the upload area, or click to select files.
+        Then, click <strong>Merge PDFs</strong>. When the merge is done, you can download the result.
+        Use <strong>Reset</strong> to clear everything.
+      </p>
+    </div>
+  </div>
 
   <script src="../tooltip.js" defer></script>
   <script src="pdfmerger.js"></script>
