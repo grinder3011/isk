@@ -3,55 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Text Diff Checker</title>
+  <title data-i18n="textdiff_page_title">Text Diff Checker</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../tooltip.styles.css?v=3">
   <link rel="stylesheet" href="textdiffchecker.styles.css?v=2" />
-
   <script src="https://cdn.jsdelivr.net/gh/google/diff-match-patch/javascript/diff_match_patch.js"></script>
 </head>
 <body>
 
   <!-- Full-width header -->
   <header class="tool-header">
-    <h1>✏️ Text Diff Checker</h1>
-    <p>Compare two texts and quickly see the differences highlighted.</p>
+    <h1 data-i18n="textdiff_header_title">✏️ Text Diff Checker</h1>
+    <p data-i18n="textdiff_header_subtitle">Compare two texts and quickly see the differences highlighted.</p>
   </header>
 
   <!-- Back to home button (centered, outside header) -->
   <div class="back-home-wrapper">
-    <a href="https://grinder3011.github.io/isk/" class="back-home-link">← Back to Home</a>
+    <a href="https://grinder3011.github.io/isk/" class="back-home-link" data-i18n="back_home">← Back to Home</a>
   </div>
 
   <!-- Main content container -->
   <div class="container">
 
     <!-- Text input areas -->
-    <textarea id="text1" placeholder="Enter original text here..."></textarea>
-    <textarea id="text2" placeholder="Enter modified text here..."></textarea>
+    <textarea id="text1" placeholder="Enter original text here..." data-i18n-placeholder="textdiff_text1_placeholder"></textarea>
+    <textarea id="text2" placeholder="Enter modified text here..." data-i18n-placeholder="textdiff_text2_placeholder"></textarea>
 
     <!-- Action buttons -->
     <div class="buttons">
-      <button id="compare-btn">🔍 Compare</button>
-      <button id="reset-btn">🔄 Reset</button>
+      <button id="compare-btn" data-i18n="textdiff_btn_compare">🔍 Compare</button>
+      <button id="reset-btn" data-i18n="textdiff_btn_reset">🔄 Reset</button>
     </div>
 
     <!-- Tooltip -->
     <button class="tooltip-toggle-btn" data-tooltip-target="json-tip" aria-expanded="false" aria-controls="json-tip">
-       <i class="fas fa-lightbulb tooltip-icon"></i> How to use this tool?
+       <i class="fas fa-lightbulb tooltip-icon"></i> <span data-i18n="textdiff_tooltip_how_to_use">How to use this tool?</span>
     </button>
 
     <div id="json-tip" class="tooltip-box hidden" aria-live="polite">
-      <p>💡 <strong>How to use this tool:</strong></p>
+      <p>💡 <strong data-i18n="textdiff_tooltip_title">How to use this tool:</strong></p>
       <ul>
-        <li>✏️ Enter or paste your <strong>original text</strong> in the first textbox.</li>
-        <li>📝 Enter or paste your <strong>modified version</strong> in the second textbox.</li>
-        <li>🔍 Click <strong>Compare</strong> to highlight the differences:</li>
+        <li data-i18n="textdiff_tooltip_step1">✏️ Enter or paste your <strong>original text</strong> in the first textbox.</li>
+        <li data-i18n="textdiff_tooltip_step2">📝 Enter or paste your <strong>modified version</strong> in the second textbox.</li>
+        <li data-i18n="textdiff_tooltip_step3">🔍 Click <strong>Compare</strong> to highlight the differences:</li>
         <ul>
-          <li><ins>Inserted</ins> text will be highlighted with <strong>green or underline</strong>.</li>
-          <li><del>Deleted</del> text will appear with a <strong>strikethrough</strong>.</li>
+          <li data-i18n="textdiff_tooltip_step3_insert"><ins>Inserted</ins> text will be highlighted with <strong>green or underline</strong>.</li>
+          <li data-i18n="textdiff_tooltip_step3_delete"><del>Deleted</del> text will appear with a <strong>strikethrough</strong>.</li>
         </ul>
-        <li>🔄 Use <strong>Reset</strong> to clear both textboxes and start over.</li>
+        <li data-i18n="textdiff_tooltip_step4">🔄 Use <strong>Reset</strong> to clear both textboxes and start over.</li>
       </ul>
     </div>
 
