@@ -136,6 +136,42 @@ main {
   cursor: crosshair;
 }
 
+/* 🔙 Back to Home button styling */
+.back-home-wrapper {
+  text-align: center;
+  margin: 1rem 0 1.5rem;
+}
+
+.back-home-link {
+  display: inline-block;
+  background: #4b6cb7;
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-home-link:hover {
+  background: #3b55a0;
+  transform: translateY(-2px);
+}
+
+.back-home-link i {
+  margin-right: 6px;
+}
+
+/* Responsive tweak */
+@media (max-width: 600px) {
+  .back-home-link {
+    font-size: 0.95rem;
+    padding: 9px 16px;
+  }
+}
+
 /* ✅ Responsive adjustments for mobile */
 @media (max-width: 600px) {
   header {
