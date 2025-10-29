@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Unit Converter</title>
+  <title data-i18n="unit_page_title">Unit Converter</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../tooltip.styles.css?v=3">
   <link rel="stylesheet" href="unitconverter.styles.css" />
@@ -12,89 +12,89 @@
 
   <!-- Full-width header -->
   <header class="tool-header">
-    <h1><span class="logo-highlight">Unit</span> Converter</h1>
+    <h1><span class="logo-highlight" data-i18n="unit_header_title">Unit</span> <span data-i18n="unit_header_subtitle">Converter</span></h1>
   </header>
 
   <!-- Back button below header -->
   <div class="back-home-wrapper">
-    <a href="../" class="back-home-link"><i class="fas fa-arrow-left"></i> Back to Tools</a>
+    <a href="../" class="back-home-link" data-i18n="back_home"><i class="fas fa-arrow-left"></i> Back to Tools</a>
   </div>
 
   <!-- Main converter container -->
   <div class="converter-container">
     <div class="converter-box">
-      <label for="category">Category</label>
-      <select id="category" title="Select the category of units">
-        <option value="length">📏 Length</option>
-        <option value="weight">⚖️ Weight</option>
-        <option value="volume">🧴 Volume</option>
-        <option value="time">⏰ Time</option>
-        <option value="temperature">🌡️ Temperature</option>
-        <option value="speed">🚗 Speed</option>
-        <option value="power">⚡ Power</option>
+      <label for="category" data-i18n="unit_label_category">Category</label>
+      <select id="category" title="Select the category of units" data-i18n-title="unit_category_title">
+        <option value="length" data-i18n="unit_option_length">📏 Length</option>
+        <option value="weight" data-i18n="unit_option_weight">⚖️ Weight</option>
+        <option value="volume" data-i18n="unit_option_volume">🧴 Volume</option>
+        <option value="time" data-i18n="unit_option_time">⏰ Time</option>
+        <option value="temperature" data-i18n="unit_option_temperature">🌡️ Temperature</option>
+        <option value="speed" data-i18n="unit_option_speed">🚗 Speed</option>
+        <option value="power" data-i18n="unit_option_power">⚡ Power</option>
       </select>
       
-      <label for="from-unit">From Unit</label>
+      <label for="from-unit" data-i18n="unit_label_from_unit">From Unit</label>
       <select id="from-unit"></select>
       
-      <label for="to-unit">To Unit</label>
+      <label for="to-unit" data-i18n="unit_label_to_unit">To Unit</label>
       <select id="to-unit"></select>
 
-      <label for="value" class="single-input-label">Value</label>
-      <input type="text" id="value" placeholder="Enter a number" />
+      <label for="value" class="single-input-label" data-i18n="unit_label_value">Value</label>
+      <input type="text" id="value" placeholder="Enter a number" data-i18n-placeholder="unit_placeholder_value" />
 
-      <label for="batch-value" class="batch-input-label hidden">Values (one per line)</label>
-      <textarea id="batch-value" class="batch-input hidden" placeholder="Enter one number per line"></textarea>
+      <label for="batch-value" class="batch-input-label hidden" data-i18n="unit_label_batch">Values (one per line)</label>
+      <textarea id="batch-value" class="batch-input hidden" placeholder="Enter one number per line" data-i18n-placeholder="unit_placeholder_batch"></textarea>
 
-      <label for="decimal-separator" title="Choose decimal separator used in numbers">Decimal Separator</label>
-      <select id="decimal-separator" title="Choose decimal separator used in numbers">
+      <label for="decimal-separator" title="Choose decimal separator used in numbers" data-i18n="unit_label_decimal">Decimal Separator</label>
+      <select id="decimal-separator" title="Choose decimal separator used in numbers" data-i18n-title="unit_decimal_title">
         <option value=".">Period (.)</option>
         <option value=",">Comma (,)</option>
       </select>
 
       <div class="batch-toggle-wrapper">
         <input type="checkbox" id="batch-toggle" />
-        <label for="batch-toggle" class="batch-toggle-label">Batch Mode (convert multiple numbers at once)</label>
+        <label for="batch-toggle" class="batch-toggle-label" data-i18n="unit_label_batch_mode">Batch Mode (convert multiple numbers at once)</label>
       </div>
       
       <!-- Tooltip trigger -->
       <button class="tooltip-toggle-btn" data-tooltip-target="json-tip" aria-expanded="false" aria-controls="json-tip">
-        <i class="fas fa-lightbulb tooltip-icon"></i> How to use this tool?
+        <i class="fas fa-lightbulb tooltip-icon"></i> <span data-i18n="unit_tooltip_how_to_use">How to use this tool?</span>
       </button>
 
       <!-- Tooltip content -->
       <div id="json-tip" class="tooltip-box hidden" aria-live="polite">
-        <p>💡 <strong>How to use this tool:</strong></p>
+        <p>💡 <strong data-i18n="unit_tooltip_title">How to use this tool:</strong></p>
         <ul>
-          <li>🔄 Select the <strong>Category</strong> of units you want to convert (Length, Weight, Volume, Time).</li>
-          <li>🔢 Enter a single number/decimal number or enable <strong>Batch Mode</strong> to convert multiple numbers at once (one per line).</li>
-          <li>🔧 Choose your preferred <strong>Decimal Separator</strong> (period or comma) based on your locale.</li>
-          <li>▶️ Click <strong>Convert</strong> to see the converted values across different units in the selected category.</li>
-          <li>📋 Use the <strong>Copy Results</strong> button to copy the output to clipboard for easy pasting elsewhere.</li>
-          <li>⬇️ In Batch Mode, you can download the results as <em>Text</em>, <em>CSV</em>, or <em>JSON</em> files.</li>
-          <li>🔄 Use the <strong>Reset</strong> button to clear inputs and results to start fresh.</li>
+          <li data-i18n="unit_tooltip_step1">🔄 Select the <strong>Category</strong> of units you want to convert (Length, Weight, Volume, Time).</li>
+          <li data-i18n="unit_tooltip_step2">🔢 Enter a single number/decimal number or enable <strong>Batch Mode</strong> to convert multiple numbers at once (one per line).</li>
+          <li data-i18n="unit_tooltip_step3">🔧 Choose your preferred <strong>Decimal Separator</strong> (period or comma) based on your locale.</li>
+          <li data-i18n="unit_tooltip_step4">▶️ Click <strong>Convert</strong> to see the converted values across different units in the selected category.</li>
+          <li data-i18n="unit_tooltip_step5">📋 Use the <strong>Copy Results</strong> button to copy the output to clipboard for easy pasting elsewhere.</li>
+          <li data-i18n="unit_tooltip_step6">⬇️ In Batch Mode, you can download the results as <em>Text</em>, <em>CSV</em>, or <em>JSON</em> files.</li>
+          <li data-i18n="unit_tooltip_step7">🔄 Use the <strong>Reset</strong> button to clear inputs and results to start fresh.</li>
         </ul>
       </div>
 
       <!-- Convert / Reset Buttons -->
       <div class="buttons">
-        <button id="convert-btn">Convert</button>
-        <button id="reset-btn">Reset</button>
+        <button id="convert-btn" data-i18n="unit_btn_convert">Convert</button>
+        <button id="reset-btn" data-i18n="unit_btn_reset">Reset</button>
       </div>
 
       <!-- Batch download options -->
       <div id="batch-options" class="hidden">
-        <label for="downloadFormatSelect">Download Format</label>
+        <label for="downloadFormatSelect" data-i18n="unit_label_download_format">Download Format</label>
         <select id="downloadFormatSelect">
-          <option value="text">Text (.txt)</option>
-          <option value="csv">CSV (.csv)</option>
-          <option value="json">JSON (.json)</option>
+          <option value="text" data-i18n="unit_option_text">Text (.txt)</option>
+          <option value="csv" data-i18n="unit_option_csv">CSV (.csv)</option>
+          <option value="json" data-i18n="unit_option_json">JSON (.json)</option>
         </select>
-        <button id="download-btn" disabled>⬇️ Download</button>
+        <button id="download-btn" disabled data-i18n="unit_btn_download">⬇️ Download</button>
       </div>
 
       <!-- Copy button -->
-      <button id="copy-btn" disabled>📋 Copy Results</button>
+      <button id="copy-btn" disabled data-i18n="unit_btn_copy">📋 Copy Results</button>
 
       <!-- Result box -->
       <div id="result" class="result"></div>
