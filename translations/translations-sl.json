@@ -150,9 +150,8 @@
   "cleaner.outputHeader": "Predogled in dejanja rezultata",
   "cleaner.outputPlaceholder": "Obdelani rezultat se bo prikazal tukaj...",
   "cleaner.downloadResult": "Prenesi rezultat",
-  "cleaner.copyLog": "Kopiraj dnevnik"
+  "cleaner.copyLog": "Kopiraj dnevnik",
 
-{
   "multizip.header": "📦 Quick-Multi Zip",
   "multizip.description": "Izberite datoteke za hitro stiskanje in prenos v ZIP.",
   "multizip.inputFile": "Izberi datoteke",
