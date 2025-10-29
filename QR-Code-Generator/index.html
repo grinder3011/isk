@@ -11,15 +11,18 @@
 <body>
   <div class="container">
 
-    <!-- Header with title, back button, and description -->
+    <!-- Header with title and description only -->
     <header class="tool-header">
       <h1>🔳 QR Code Generator</h1>
-      <div class="back-home-wrapper">
-        <a href="https://grinder3011.github.io/isk/" class="back-home-link">← Back to Home</a>
-      </div>
       <p>Generate custom QR codes for URLs, text, or any data, with optional styling and logos.</p>
     </header>
 
+    <!-- Back to Home button outside header -->
+    <div class="back-home-wrapper">
+      <a href="https://grinder3011.github.io/isk/" class="back-home-link">← Back to Home</a>
+    </div>
+
+    <!-- Main content -->
     <main class="main-content">
       <label for="qr-input" class="sr-only">Text or URL for QR code</label>
       <input type="text" id="qr-input" placeholder="Enter text or URL here" autocomplete="off" spellcheck="false" aria-describedby="qr-input-desc" />
