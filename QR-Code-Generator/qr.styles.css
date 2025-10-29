@@ -8,11 +8,12 @@ body {
   background: #f7f9fc;
   color: #222;
   line-height: 1.5;
+  padding: 1rem;
 }
 
 /* ===== Container ===== */
 .container {
-  max-width: 480px;
+  max-width: 700px;
   margin: 2rem auto;
   background: #fff;
   border-radius: 12px;
@@ -23,33 +24,31 @@ body {
   gap: 16px;
 }
 
-/* ===== Header & Back Button ===== */
+/* ===== Header ===== */
 .tool-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .tool-header h1 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  margin: 0;
+  margin-bottom: 0.5rem;
   color: #0b3d91;
+  user-select: none;
 }
 
 .tool-header p {
   font-size: 1rem;
   color: #333;
-  margin: 0;
+  margin-bottom: 0.5rem;
 }
 
-/* Back to Home button styling */
+/* ===== Back to Home button ===== */
 .back-home-wrapper {
   display: flex;
   justify-content: center;
-  width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 .back-home-link {
@@ -74,8 +73,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100%;
 }
 
+/* Input */
 input[type="text"] {
   padding: 10px 14px;
   font-size: 1rem;
@@ -91,9 +92,10 @@ input[type="text"]:focus {
   box-shadow: 0 0 8px rgba(11, 61, 145, 0.3);
 }
 
-/* ===== Buttons ===== */
+/* ===== Button Row ===== */
 .button-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
 }
@@ -110,7 +112,7 @@ input[type="text"]:focus {
   gap: 6px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   user-select: none;
-  min-width: 120px;
+  min-width: 140px;
 }
 
 .primary-btn {
@@ -171,7 +173,7 @@ input[type="text"]:focus {
   transform: rotate(180deg);
 }
 
-/* QR code container */
+/* QR Code container */
 .qr-code-container {
   display: flex;
   justify-content: center;
