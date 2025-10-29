@@ -11,25 +11,23 @@
 </head>
 <body>
 
-  <!-- Header Container -->
-  <div class="container">
-    <header class="tool-header">
-      <h1>🖼️ Simple Image Cropper</h1>
-      <p>Upload an image, draw a crop area, and download the result easily.</p>
-    </header>
-  </div>
+  <!-- Full-width header -->
+  <header class="tool-header">
+    <h1>🖼️ Simple Image Cropper</h1>
+  </header>
 
   <!-- Back/Home button -->
   <div class="back-home-wrapper">
     <a href="../index.html" class="back-home-link">← Back to Home</a>
   </div>
 
-  <!-- Main Content -->
+  <!-- Main content wrapper like other tools -->
   <div class="main-content">
+
     <!-- File input -->
     <input type="file" id="imageInput" accept="image/*" />
 
-    <!-- Top Controls -->
+    <!-- Top controls -->
     <div class="controls-wrapper">
       <div class="controls-row">
         <button id="drawCropBtn">✏️ Draw new crop area</button>
@@ -41,12 +39,11 @@
       </div>
     </div>
 
-    <!-- Tooltip trigger -->
+    <!-- Tooltip -->
     <button class="tooltip-toggle-btn" data-tooltip-target="json-tip" aria-expanded="false" aria-controls="json-tip">
       <i class="fas fa-lightbulb tooltip-icon"></i> How to use this tool?
     </button>
 
-    <!-- Tooltip content -->
     <div id="json-tip" class="tooltip-box hidden" aria-live="polite">
       <p>💡 <strong>How to use this tool:</strong></p>
       <ul>
@@ -60,13 +57,13 @@
       </ul>
     </div>
 
-    <!-- Cropper Container -->
+    <!-- Cropper container -->
     <div class="cropper-container">
       <img id="image" alt="Upload an image to crop" />
       <div id="cropArea"></div>
     </div>
 
-    <!-- Bottom Controls -->
+    <!-- Bottom controls -->
     <div class="controls-wrapper">
       <div class="controls-row">
         <button id="cropBtn" disabled>✂️ Crop</button>
@@ -83,6 +80,7 @@
       <h2>Cropped Result:</h2>
       <canvas id="resultCanvas"></canvas>
     </div>
+
   </div> <!-- /.main-content -->
 
   <script src="../tooltip.js" defer></script>
