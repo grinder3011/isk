@@ -1,26 +1,86 @@
-/* Basic Reset & Typography */
+/* ============================= */
+/* Base Reset & Typography       */
+/* ============================= */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f7f9fc;
   color: #333;
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  text-align: center;
 }
 
+/* ============================= */
+/* Full-width Header             */
+/* ============================= */
+header.header {
+  width: 100%;
+  background-color: #4b6cb7;
+  color: white;
+  padding: 18px 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+header.header .tool-title {
+  margin: 0;
+}
+
+/* ============================= */
+/* Back to Home Button Wrapper    */
+/* ============================= */
+.back-home-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.back-home-link {
+  background-color: #0078d7;
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.25s ease;
+}
+
+.back-home-link:hover,
+.back-home-link:focus {
+  background-color: #005ea3;
+  outline: none;
+}
+
+/* ============================= */
+/* Main Content Container        */
+/* ============================= */
 .container {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto 40px auto;
   background: #fff;
   padding: 25px 30px;
   border-radius: 8px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  text-align: left;
 }
 
+/* ============================= */
+/* Headings                      */
+/* ============================= */
 h1, h2 {
   margin-bottom: 15px;
   color: #222;
 }
 
+/* ============================= */
+/* Labels & Inputs               */
+/* ============================= */
 label {
   display: block;
   margin-bottom: 8px;
@@ -58,6 +118,9 @@ input[type="checkbox"], input[type="radio"] {
   display: none;
 }
 
+/* ============================= */
+/* Fieldsets & Legends           */
+/* ============================= */
 fieldset {
   border: 1px solid #ddd;
   padding: 15px 20px;
@@ -72,6 +135,9 @@ legend {
   color: #555;
 }
 
+/* ============================= */
+/* Process Button                */
+/* ============================= */
 #processButton {
   background-color: #0078d7;
   color: white;
@@ -87,6 +153,9 @@ legend {
   background-color: #005ea3;
 }
 
+/* ============================= */
+/* Output Preview                */
+/* ============================= */
 #outputPreview {
   font-family: monospace;
   background-color: #222;
@@ -99,12 +168,14 @@ legend {
   word-wrap: break-word;
 }
 
+/* ============================= */
+/* Download / Copy Buttons       */
+/* ============================= */
 #downloadButtons {
   margin-top: 15px;
   text-align: right;
 }
 
-/* Style for both download and copy log buttons */
 #downloadButton,
 #copyLogButton {
   background-color: #28a745;
@@ -115,9 +186,32 @@ legend {
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 #downloadButton:hover,
 #copyLogButton:hover {
   background-color: #1e7e34;
+}
+
+/* ============================= */
+/* Responsive Adjustments        */
+/* ============================= */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+    margin: 0 10px 30px 10px;
+  }
+
+  #downloadButtons {
+    text-align: center;
+  }
+
+  #downloadButton,
+  #copyLogButton {
+    width: 48%;
+    justify-content: center;
+  }
 }
