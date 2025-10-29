@@ -5,18 +5,17 @@ body {
     padding: 1em;
     background: #f7f9fc;
     color: #333;
-    text-align: center; /* ensures content defaults to center for small elements */
 }
 
-/* Full-width header */
+/* Header full width */
 .tool-header {
     width: 100%;
-    background-color: #4b6cb7; /* optional: colored header for distinction */
+    background-color: #4b6cb7;
     color: white;
     padding: 2em 1em;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .tool-header h1 {
@@ -26,15 +25,15 @@ body {
 
 .tool-header p {
     font-size: 1.1rem;
-    color: #eef3fb; /* lighter text on colored header */
-    margin-bottom: 1.5em;
+    color: #eef3fb;
+    margin-bottom: 0;
 }
 
-/* Back to homepage button inside header */
+/* Back button always under header, centered */
 .back-home-wrapper {
     display: flex;
     justify-content: center;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 .back-home-link {
@@ -47,32 +46,30 @@ body {
     font-weight: bold;
     transition: background-color 0.3s ease;
     text-align: center;
-    white-space: nowrap;
 }
 
 .back-home-link:hover {
     background-color: #0056b3;
 }
 
-/* Container styling: centered, below header */
+/* Main container centered */
 .container {
     max-width: 90%;
-    margin: 0 auto 2em;
+    margin: 0 auto;
     background: #fff;
     padding: 2.5em;
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.12);
 }
 
-/* Tool wrapper fills container */
+/* Tool wrapper spacing */
 .tool-wrapper {
     max-width: 100%;
     margin: 0 auto;
     padding: 1em 0;
-}
-
-.tool-wrapper > * {
-    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 /* File input centered */
@@ -169,7 +166,7 @@ input[type="file"] {
 }
 
 /* Mobile adjustments */
-@media (max-width: 600px) {
+@media (max-width: 400px) {
     .back-home-link {
         padding: 8px 12px;
         font-size: 0.9rem;
@@ -181,10 +178,6 @@ input[type="file"] {
 
     .tool-header p {
         font-size: 1rem;
-    }
-
-    .container {
-        padding: 1.5em;
     }
 
     .actions button {
