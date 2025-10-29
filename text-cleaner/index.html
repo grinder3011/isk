@@ -5,10 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Text & Filename Cleaner Tool</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
+
+  <!-- Full-width header -->
+  <header class="header">
+    <h1 class="tool-title">Text & Filename Cleaner Tool</h1>
+  </header>
+
+  <!-- Back to Home button -->
+  <div class="back-home-wrapper">
+    <a href="../index.html" class="back-home-link"><i class="fas fa-home"></i> Home</a>
+  </div>
+
+  <!-- Main content container (centered) -->
   <div class="container">
-    <h1>Text & Filename Cleaner Tool</h1>
 
     <section id="mode-selection">
       <h2>Select a task</h2>
@@ -28,7 +40,7 @@
 
     <section id="input-section">
 
-      <!-- For filenames: textarea for list of filenames OR file upload input -->
+      <!-- Filenames input -->
       <div id="fileNamesInput" class="input-group">
         <label for="fileNamesTextArea">Enter file names (one per line):</label>
         <textarea id="fileNamesTextArea" rows="6" placeholder="example.jpg&#10;my_file(1).png"></textarea>
@@ -39,13 +51,13 @@
         <input type="file" id="fileUploadForNames" multiple />
       </div>
 
-      <!-- For text input: plain textarea -->
+      <!-- Text input -->
       <div id="textInput" class="input-group hidden">
         <label for="textInputArea">Enter or paste text:</label>
         <textarea id="textInputArea" rows="8" placeholder="Paste your text here..."></textarea>
       </div>
 
-      <!-- For text file upload -->
+      <!-- Text file upload -->
       <div id="fileUploadInput" class="input-group hidden">
         <label for="textFileUpload">Upload one or more text files (.txt):</label>
         <input type="file" id="textFileUpload" accept=".txt" multiple />
@@ -89,7 +101,7 @@
         <select id="separatorSelect" disabled>
           <option value="-">Dash (-)</option>
           <option value="_">Underscore (_)</option>
-          <option value=" ">Space</option> <!-- NEW OPTION -->
+          <option value=" ">Space</option>
         </select>
       </fieldset>
     </section>
@@ -107,6 +119,7 @@
         <button id="copyLogButton" style="margin-left: 10px;">Copy Log</button>
       </div>
     </section>
+
   </div>
 
   <script src="app.js"></script>
