@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MultiZip Tool</title>
+  <title data-i18n="multizip_page_title">MultiZip Tool</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../tooltip.styles.css?v=3">
   <link rel="stylesheet" href="multizip.styles.css" />
@@ -13,13 +13,13 @@
 
   <!-- Full-width header -->
   <header class="tool-header">
-    <h1>📦 Quick-Multi Zip</h1>
-    <p>Select your files to zip quickly and download them.</p>
+    <h1 data-i18n="multizip_header_title">📦 Quick-Multi Zip</h1>
+    <p data-i18n="multizip_header_subtitle">Select your files to zip quickly and download them.</p>
   </header>
 
   <!-- Back button under header -->
   <div class="back-home-wrapper">
-    <a href="https://grinder3011.github.io/isk/" class="back-home-link">← Back to Home</a>
+    <a href="https://grinder3011.github.io/isk/" class="back-home-link" data-i18n="back_home">← Back to Home</a>
   </div>
 
   <!-- Main container centered -->
@@ -30,25 +30,25 @@
 
       <!-- Tooltip trigger -->
       <button class="tooltip-toggle-btn" data-tooltip-target="json-tip" aria-expanded="false" aria-controls="json-tip">
-        <i class="fas fa-lightbulb tooltip-icon"></i> How to use this tool?
+        <i class="fas fa-lightbulb tooltip-icon"></i> <span data-i18n="multizip_tooltip_how_to_use">How to use this tool?</span>
       </button>
 
       <!-- Tooltip content -->
       <div id="json-tip" class="tooltip-box hidden" aria-live="polite">
-        <p>💡 <strong>How to use this tool:</strong></p>
+        <p>💡 <strong data-i18n="multizip_tooltip_title">How to use this tool:</strong></p>
         <ul>
-          <li>📁 Use the file picker to select one or more files. New files are added or replace existing ones with the same name.</li>
-          <li>🗑️ Remove individual files from the list by clicking the ❌ button next to each filename.</li>
-          <li>📦 Click <strong>Create Archive</strong> to prepare the zip file once you’re happy with your selection.</li>
-          <li>⬇️ Use <strong>Download Archive</strong> to save the zip file to your device.</li>
-          <li>🔄 Click <strong>Remove All Files</strong> to clear the entire selection and start fresh.</li>
+          <li data-i18n="multizip_tooltip_step_select">📁 Use the file picker to select one or more files. New files are added or replace existing ones with the same name.</li>
+          <li data-i18n="multizip_tooltip_step_remove">🗑️ Remove individual files from the list by clicking the ❌ button next to each filename.</li>
+          <li data-i18n="multizip_tooltip_step_create">📦 Click <strong>Create Archive</strong> to prepare the zip file once you’re happy with your selection.</li>
+          <li data-i18n="multizip_tooltip_step_download">⬇️ Use <strong>Download Archive</strong> to save the zip file to your device.</li>
+          <li data-i18n="multizip_tooltip_step_reset">🔄 Click <strong>Remove All Files</strong> to clear the entire selection and start fresh.</li>
         </ul>
       </div>
       
       <div class="actions">
-        <button id="createZipBtn">📦 Create Archive</button>
-        <button id="downloadBtn">⬇️ Download Archive</button>
-        <button id="resetBtn">🔄 Remove All Files</button>
+        <button id="createZipBtn" data-i18n="multizip_btn_create">📦 Create Archive</button>
+        <button id="downloadBtn" data-i18n="multizip_btn_download">⬇️ Download Archive</button>
+        <button id="resetBtn" data-i18n="multizip_btn_reset">🔄 Remove All Files</button>
       </div>
     </div> <!-- /.tool-wrapper -->
   </div> <!-- /.container -->
