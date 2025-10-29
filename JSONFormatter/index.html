@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>JSON Formatter / Validator</title>  
+  <title data-i18n="jsonf_page_title">JSON Formatter / Validator</title>  
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../tooltip.styles.css?v=3">
   <link rel="stylesheet" href="JSONFormatter.styles.css" />
@@ -11,45 +11,45 @@
 <body>
   <!-- Full-width header with title and icon -->
   <header class="header">
-    <h1 class="tool-title">🧾 JSON Formatter / Validator</h1>
+    <h1 class="tool-title">🧾 <span data-i18n="jsonf_header_title">JSON Formatter / Validator</span></h1>
   </header>
 
   <div class="back-home-wrapper">
-    <a href="https://grinder3011.github.io/isk/" class="back-home-link">← Back to Home</a>
+    <a href="https://grinder3011.github.io/isk/" class="back-home-link" data-i18n="back_home">← Back to Home</a>
   </div>
 
   <main class="container">
     <!-- Upload button -->
-    <label for="upload-json" class="upload-label" title="Upload JSON file">
-      📁 Upload JSON
+    <label for="upload-json" class="upload-label" title="Upload JSON" data-i18n-title="jsonf_upload_title">
+      📁 <span data-i18n="jsonf_upload_label">Upload JSON</span>
       <input type="file" id="upload-json" accept=".json,application/json" hidden />
     </label>
 
     <!-- JSON input area -->
-    <textarea id="json-input" placeholder="Paste or type your JSON here..." spellcheck="false"></textarea>
+    <textarea id="json-input" placeholder="Paste or type your JSON here..." spellcheck="false" data-i18n-placeholder="jsonf_input_placeholder"></textarea>
 
     <!-- Action buttons -->
     <div class="buttons-row">
-      <button id="format-btn" class="btn" title="Format JSON">✨ Format JSON</button>
-      <button id="validate-btn" class="btn" title="Validate JSON">🔍 Validate JSON</button>
-      <button id="clear-btn" class="btn" title="Clear input" disabled>🗑️ Clear</button>
-      <button id="copy-btn" class="btn" title="Copy formatted JSON to clipboard" disabled>📋 Copy</button>
-      <button id="download-btn" class="btn" title="Download formatted JSON" disabled>⬇️ Download</button>
+      <button id="format-btn" class="btn" title="Format JSON" data-i18n="jsonf_btn_format">✨ Format JSON</button>
+      <button id="validate-btn" class="btn" title="Validate JSON" data-i18n="jsonf_btn_validate">🔍 Validate JSON</button>
+      <button id="clear-btn" class="btn" title="Clear input" disabled data-i18n="jsonf_btn_clear">🗑️ Clear</button>
+      <button id="copy-btn" class="btn" title="Copy formatted JSON to clipboard" disabled data-i18n="jsonf_btn_copy">📋 Copy</button>
+      <button id="download-btn" class="btn" title="Download formatted JSON" disabled data-i18n="jsonf_btn_download">⬇️ Download</button>
     </div>
 
     <!-- Tooltip toggle -->
     <button class="tooltip-toggle-btn" data-tooltip-target="json-tip" aria-expanded="false" aria-controls="json-tip">
-      <i class="fas fa-lightbulb tooltip-icon"></i> How to use this tool?
+      <i class="fas fa-lightbulb tooltip-icon"></i> <span data-i18n="jsonf_tooltip_how_to_use">How to use this tool?</span>
     </button>
 
     <!-- Tooltip content -->
     <div id="json-tip" class="tooltip-box hidden" aria-live="polite">
-      <p>💡 <strong>How to use this tool:</strong></p>
+      <p>💡 <strong data-i18n="jsonf_tooltip_title">How to use this tool:</strong></p>
       <ul>
-        <li>📋 Paste or upload JSON to format or validate.</li>
-        <li>✨ Click <em>Format JSON</em> to prettify your JSON.</li>
-        <li>🔍 Click <em>Validate JSON</em> to check for errors.</li>
-        <li>⬇️ Download or 📋 Copy your formatted JSON.</li>
+        <li data-i18n="jsonf_tooltip_step1">📋 Paste or upload JSON to format or validate.</li>
+        <li data-i18n="jsonf_tooltip_step2">✨ Click <em>Format JSON</em> to prettify your JSON.</li>
+        <li data-i18n="jsonf_tooltip_step3">🔍 Click <em>Validate JSON</em> to check for errors.</li>
+        <li data-i18n="jsonf_tooltip_step4">⬇️ Download or 📋 Copy your formatted JSON.</li>
       </ul>
     </div>
 
