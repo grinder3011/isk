@@ -7,15 +7,26 @@ body {
     color: #333;
 }
 
-/* Full-width header */
+/* Container styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header with large title */
 .tool-header {
     width: 100%;
     text-align: center;
-    background: #4b6cb7;
-    color: white;
-    padding: 20px 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-bottom: 2em;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
 }
 
 .tool-header h1 {
@@ -25,151 +36,189 @@ body {
 
 .tool-header p {
     font-size: 1.1rem;
-    margin-bottom: 0;
-    color: #e0e0e0;
+    color: #555;
+    margin: 0;
 }
 
-/* Back to home button below title */
+/* Back to Home Button */
 .back-home-wrapper {
-    margin: 0.5em 0 1em 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 15px 0;
 }
 
 .back-home-link {
     display: inline-block;
-    padding: 10px 16px;
+    padding: 10px 18px;
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    text-align: center;
 }
 
 .back-home-link:hover {
     background-color: #0056b3;
 }
 
-/* ===== Centered main content ===== */
+/* Tool wrapper to center main content */
 .tool-wrapper {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 1em;
+    width: 100%;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
+    align-items: center;
+    gap: 15px;
 }
 
-/* Drag & Drop area */
+/* Drag & Drop Area */
 #drop-zone {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2em;
-    border: 2px dashed #0078d4;
+    border: 2px dashed #bbb;
     border-radius: 10px;
-    background: #f4f7fa;
+    padding: 40px 20px;
     cursor: pointer;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
     text-align: center;
+    transition: border-color 0.3s, background-color 0.2s;
 }
 
 #drop-zone:hover,
 #drop-zone:focus {
-    background-color: #eaf0f8;
-    border-color: #005fa3;
-    outline: none;
+    border-color: #007bff;
+    background-color: #f0f4ff;
 }
 
 .drop-icon {
-    font-size: 2.5rem;
-    margin-bottom: 0.5em;
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 .drop-text {
     font-size: 1rem;
-    color: #333;
 }
 
-/* Preview list of uploaded files */
+/* Preview List */
 .preview-list {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+    width: 100%;
 }
 
 .preview-list div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 10px;
-    background: #f0f4f8;
+    background: #f4f7fa;
+    padding: 8px 12px;
     border-radius: 6px;
-    font-size: 0.95rem;
+    margin-bottom: 6px;
 }
 
 .preview-list div span {
     flex-grow: 1;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
 .preview-list div button {
     background: transparent;
     border: none;
     color: #d33;
-    font-size: 1.2em;
     cursor: pointer;
-    transition: color 0.2s ease;
+    font-size: 1.2em;
+    transition: color 0.2s;
 }
 
 .preview-list div button:hover {
     color: #a00;
 }
 
-/* ===== Buttons ===== */
-.actions {
+/* Buttons */
+.buttons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
+    width: 100%;
 }
 
-.actions button {
-    padding: 10px 20px;
+.buttons button {
+    padding: 10px 18px;
     font-size: 1rem;
     border: none;
-    background: #0078d4;
-    color: white;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     min-width: 140px;
-    transition: 0.2s ease;
+    transition: background-color 0.25s;
 }
 
-.actions button:hover {
-    background: #005fa3;
+#merge-btn {
+    background-color: #0078d4;
+    color: #fff;
 }
 
-/* Tooltip section */
+#merge-btn:hover {
+    background-color: #005fa3;
+}
+
+#reset-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+#reset-btn:hover {
+    background-color: #a71d2a;
+}
+
+#download-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+#download-btn:hover {
+    background-color: #1e7e34;
+}
+
+/* Tooltip Button */
 .tooltip-toggle-btn {
     display: block;
-    margin: 0 auto;
+    margin: 20px auto;
     text-align: center;
 }
 
+/* Tooltip box */
 .tooltip-box {
     max-width: 500px;
-    margin: 1em auto;
-    text-align: left;
+    margin: 10px auto;
+    background: #e6f0ff;
+    border-left: 5px solid #0078d4;
+    padding: 10px 12px;
+    border-radius: 6px;
+    color: #1b2a7a;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    display: none;
 }
 
-/* ===== Responsive adjustments ===== */
+.tooltip-box ul {
+    padding-left: 1.2em;
+    margin: 0.5em 0 0 0;
+}
+
+.tooltip-box li {
+    margin-bottom: 0.4em;
+}
+
+/* Responsive adjustments */
 @media (max-width: 600px) {
     .tool-wrapper {
-        max-width: 95%;
-        padding: 0.5em;
+        max-width: 100%;
+        padding: 0 10px;
     }
 
     .tool-header h1 {
@@ -177,19 +226,15 @@ body {
     }
 
     .tool-header p {
-        font-size: 0.95rem;
+        font-size: 1rem;
     }
 
-    .drop-icon {
-        font-size: 2rem;
+    .back-home-link {
+        padding: 8px 12px;
+        font-size: 0.9rem;
     }
 
-    .drop-text {
-        font-size: 0.95rem;
-    }
-
-    .actions button {
-        flex: 1 1 100%;
-        min-width: 0;
+    #drop-zone {
+        padding: 30px 10px;
     }
 }
