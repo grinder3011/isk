@@ -24,8 +24,12 @@ header.header {
   margin-bottom: 20px;
 }
 
+/* ===== Header Title Color Fix ===== */
 header.header .tool-title {
+  color: white;       /* Ensure the title text is white */
   margin: 0;
+  font-size: 2rem;    /* Match other tool header sizes */
+  font-weight: 700;
 }
 
 /* ============================= */
