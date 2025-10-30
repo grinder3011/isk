@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="imagecropper_header">🖼️ Preprost obrezovalnik slik</title>
+  <title data-i18n="imagecropper_header">🖼️ Simple Image Cropper</title>
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../tooltip.styles.css?v=3">
@@ -13,12 +13,12 @@
 
   <!-- Full-width header -->
   <header class="tool-header">
-    <h1 data-i18n="imagecropper_header">🖼️ Preprost obrezovalnik slik</h1>
+    <h1 data-i18n="imagecropper_header">🖼️ Simple Image Cropper</h1>
   </header>
 
   <!-- Back/Home button -->
   <div class="back-home-wrapper">
-    <a href="../index.html" class="back-home-link" data-i18n="common_backHome">← Nazaj na domačo stran</a>
+    <a href="../index.html" class="back-home-link" data-i18n="common_backHome">← Back to Home</a>
   </div>
 
   <!-- Main content wrapper -->
@@ -30,28 +30,28 @@
     <!-- Top controls -->
     <div class="controls-wrapper">
       <div class="controls-row">
-        <button id="drawCropBtn" data-i18n="imagecropper_drawCropBtn">✏️ Nariši novo območje obreza</button>
-        <button id="clearCropBtn" disabled data-i18n="imagecropper_clearCropBtn">🧹 Počisti območje obreza</button>
+        <button id="drawCropBtn" data-i18n="imagecropper_drawCropBtn">✏️ Draw New Crop Area</button>
+        <button id="clearCropBtn" disabled data-i18n="imagecropper_clearCropBtn">🧹 Clear Crop Area</button>
       </div>
       <div class="controls-row">
-        <button id="zoomInBtn" data-i18n="imagecropper_zoomInBtn">🔍➕ Povečaj</button>
-        <button id="zoomOutBtn" data-i18n="imagecropper_zoomOutBtn">🔍➖ Pomanjšaj</button>
+        <button id="zoomInBtn" data-i18n="imagecropper_zoomInBtn">🔍➕ Zoom In</button>
+        <button id="zoomOutBtn" data-i18n="imagecropper_zoomOutBtn">🔍➖ Zoom Out</button>
       </div>
     </div>
 
     <!-- Tooltip -->
     <button class="tooltip-toggle-btn" data-tooltip-target="cropper-tip" aria-expanded="false" aria-controls="cropper-tip" data-i18n="imagecropper_tooltipTitle">
-      <i class="fas fa-lightbulb tooltip-icon"></i> <span data-i18n="imagecropper_tooltipTitle">💡 Kako uporabljati Image Cropper:</span>
+      <i class="fas fa-lightbulb tooltip-icon"></i> <span data-i18n="imagecropper_tooltipTitle">💡 How to use the Image Cropper:</span>
     </button>
 
     <div id="cropper-tip" class="tooltip-box hidden" aria-live="polite">
-      <p>💡 <strong data-i18n="imagecropper_tooltipTitle">Kako uporabljati Image Cropper:</strong></p>
+      <p>💡 <strong data-i18n="imagecropper_tooltipTitle">How to use the Image Cropper:</strong></p>
       <ul>
-        <li data-i18n="imagecropper_tooltipStep1">Naložite sliko z zgornjim gumbom.</li>
-        <li data-i18n="imagecropper_tooltipStep2">Kliknite 'Nariši novo območje obreza', da izberete področje.</li>
-        <li data-i18n="imagecropper_tooltipStep3">Uporabite 'Počisti območje obreza', če želite začeti znova.</li>
-        <li data-i18n="imagecropper_tooltipStep4">Uporabite Povečaj in Pomanjšaj za nastavitev pogleda.</li>
-        <li data-i18n="imagecropper_tooltipStep5">Ko ste zadovoljni, kliknite 'Obreži' in nato 'Prenesi'.</li>
+        <li data-i18n="imagecropper_tooltipStep1">Upload an image using the button above.</li>
+        <li data-i18n="imagecropper_tooltipStep2">Click 'Draw New Crop Area' to select the area you want to crop.</li>
+        <li data-i18n="imagecropper_tooltipStep3">Use 'Clear Crop Area' to start over.</li>
+        <li data-i18n="imagecropper_tooltipStep4">Use Zoom In and Zoom Out to adjust the view.</li>
+        <li data-i18n="imagecropper_tooltipStep5">Once satisfied, click 'Crop' and then 'Download'.</li>
       </ul>
     </div>
 
@@ -64,18 +64,18 @@
     <!-- Bottom controls -->
     <div class="controls-wrapper">
       <div class="controls-row">
-        <button id="cropBtn" disabled data-i18n="imagecropper_cropBtn">✂️ Obreži</button>
+        <button id="cropBtn" disabled data-i18n="imagecropper_cropBtn">✂️ Crop</button>
         <select id="downloadFormatSelect" data-i18n-label="imagecropper_format">
           <option value="image/png" data-i18n="imagecropper_downloadBtn">PNG</option>
           <option value="image/jpeg" data-i18n="imagecropper_downloadBtn">JPEG</option>
         </select>
-        <button id="downloadBtn" disabled data-i18n="imagecropper_downloadBtn">⬇️ Prenesi</button>
+        <button id="downloadBtn" disabled data-i18n="imagecropper_downloadBtn">⬇️ Download</button>
       </div>
     </div>
 
     <!-- Result -->
     <div id="resultContainer">
-      <h2 data-i18n="imagecropper_result">Rezultat obreza:</h2>
+      <h2 data-i18n="imagecropper_result">Cropped Result:</h2>
       <canvas id="resultCanvas"></canvas>
     </div>
 
