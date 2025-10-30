@@ -172,6 +172,9 @@
   "multizip_tooltipStep3": "Kliknite 'Ustvari arhiv', ko ste zadovoljni z izbiro.",
   "multizip_tooltipStep4": "Kliknite 'Prenesi arhiv', da shranite ZIP datoteko.",
   "multizip_tooltipStep5": "Kliknite 'Odstrani vse datoteke', da začnete znova.",
+  "multizip_create": "📦 Ustvari arhiv",
+  "multizip_download": "⬇️ Prenesi arhiv",
+  "multizip_reset": "🔄 Odstrani vse datoteke",
 
   "pdfmerger_header": "📄 Preprost združevalnik PDF",
   "pdfmerger_description": "Naložite in združite več PDF dokumentov hitro in enostavno.",
@@ -284,5 +287,6 @@
   "textcleaner_tooltipStep3": "Izberite možnosti čiščenja, kot so odstranjevanje posebnih znakov, obrezovanje presledkov ali vstavljanje ločil.",
   "textcleaner_tooltipStep4": "Kliknite 'Obdelaj', da si ogledate rezultate, ki jih lahko kopirate ali prenesete."
 }
+
 
 
