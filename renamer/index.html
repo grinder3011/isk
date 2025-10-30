@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title data-i18n="renamer_page_title">Easy File Renamer</title>
+  <title data-i18n="renamer_header_title">Enostavno preimenovanje datotek</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../tooltip.styles.css?v=3">
   <link rel="stylesheet" href="renamer.styles.css">
@@ -11,84 +11,93 @@
 <body>
 
   <header>
-    <h1 data-i18n="renamer_header_title">Easy File Renamer</h1>
-    <p data-i18n="renamer_header_subtitle">Rename and download your files with a custom name pattern</p>
+    <h1 data-i18n="renamer_header_title">Enostavno preimenovanje datotek</h1>
+    <p data-i18n="renamer_header_subtitle">Preimenujte in prenesite datoteke z lastnim vzorcem imen</p>
   </header>
 
   <div class="back-home-wrapper">
-    <a href="https://grinder3011.github.io/isk/" class="back-home-link" data-i18n="back_home">← Back to Home</a>
+    <a href="https://grinder3011.github.io/isk/" class="back-home-link" data-i18n="common_backHome">← Nazaj na domačo stran</a>
   </div>
   
   <main>
     <div class="drop-zone" id="drop-zone" tabindex="0" aria-label="File drop zone" data-i18n-alt="renamer_drop_zone_aria_label">
-      <p><strong data-i18n="renamer_dropzone_dragdrop">Drag & drop your files here</strong> <span data-i18n="renamer_dropzone_or">or</span> <span data-i18n="renamer_dropzone_click">click to select</span></p>
+      <p>
+        <strong data-i18n="renamer_dropzone_dragdrop">Povlecite datoteke sem</strong> 
+        <span data-i18n="renamer_dropzone_or">ali</span> 
+        <span data-i18n="renamer_dropzone_click">kliknite za izbiro</span>
+      </p>
       <input type="file" id="file-input" multiple webkitdirectory style="display: none;" />
     </div>
 
     <div class="form-group">
-      <label for="sort-order" data-i18n="renamer_label_sort_files">Sort Files By:</label>
+      <label for="sort-order" data-i18n="renamer_label_sort_files">Razvrsti datoteke po:</label>
       <select id="sort-order">
-        <option value="custom" data-i18n="renamer_sort_manual">Manual (drag to reorder)</option>
-        <option value="name-asc" data-i18n="renamer_sort_name_asc">Filename (A → Z)</option>
-        <option value="name-desc" data-i18n="renamer_sort_name_desc">Filename (Z → A)</option>
-        <option value="date-asc" data-i18n="renamer_sort_date_asc">Date Modified (Oldest First)</option>
-        <option value="date-desc" data-i18n="renamer_sort_date_desc">Date Modified (Newest First)</option>
-        <option value="id-asc" data-i18n="renamer_sort_id_asc">ID Ascending (Based on Leading Number)</option>
-        <option value="id-desc" data-i18n="renamer_sort_id_desc">ID Descending (Based on Leading Number)</option>
+        <option value="custom" data-i18n="renamer_sort_manual">Ročno (povlecite za spremembo vrstnega reda)</option>
+        <option value="name-asc" data-i18n="renamer_sort_name_asc">Ime datoteke (A → Z)</option>
+        <option value="name-desc" data-i18n="renamer_sort_name_desc">Ime datoteke (Z → A)</option>
+        <option value="date-asc" data-i18n="renamer_sort_date_asc">Datum spremembe (najstarejši prvi)</option>
+        <option value="date-desc" data-i18n="renamer_sort_date_desc">Datum spremembe (najnovejši prvi)</option>
+        <option value="id-asc" data-i18n="renamer_sort_id_asc">ID naraščajoče (glede na začetno številko)</option>
+        <option value="id-desc" data-i18n="renamer_sort_id_desc">ID padajoče (glede na začetno številko)</option>
       </select>
     </div>
 
     <div class="input-row">
       <div class="form-group">
-        <label for="prefix" data-i18n="renamer_label_prefix">Filename Prefix</label>
-        <input type="text" id="prefix" placeholder="e.g. vacation, invoice, photo" value="file" />
+        <label for="prefix" data-i18n="renamer_label_prefix">Predpona imena datoteke</label>
+        <input type="text" id="prefix" placeholder="npr. počitnice, račun, foto" value="file" />
       </div>
     </div>
+
     <div class="input-row">
       <div class="form-group">
-        <label for="start-number" data-i18n="renamer_label_start_number">Starting Number</label>
+        <label for="start-number" data-i18n="renamer_label_start_number">Začetna številka</label>
         <input type="text" id="start-number" value="1" />
-        <small data-i18n="renamer_example_start_number">Example: enter <code>0050</code> to continue numbering from 50 with leading zeroes.</small>
+        <small data-i18n="renamer_example_start_number">Primer: vnesite <code>0050</code> za nadaljevanje številčenja od 50 z začetnimi ničlami.</small>
       </div>
     </div>
 
     <div class="form-row-spread">
       <div class="form-group checkbox-group">
-        <label><input type="checkbox" id="use-underscore" /> <span data-i18n="renamer_label_use_underscore">Add underscore before number for the file name</span></label>
+        <label>
+          <input type="checkbox" id="use-underscore" /> 
+          <span data-i18n="renamer_label_use_underscore">Dodaj podčrtaj pred številko v imenu datoteke</span>
+        </label>
       </div>
     </div>
 
     <div class="example-filename-container" aria-live="polite" aria-atomic="true">
-      <label data-i18n="renamer_label_filename_preview">📄 File name preview:</label>
+      <label data-i18n="renamer_label_filename_preview">📄 Predogled imena datoteke:</label>
       <div id="example-filename" class="example-filename">file1.jpg</div>
     </div>
 
-    
     <!-- Tooltip trigger -->
-    <button class="tooltip-toggle-btn" data-tooltip-target="json-tip" aria-expanded="false" aria-controls="json-tip">
-      <i class="fas fa-lightbulb tooltip-icon"></i> <span data-i18n="renamer_tooltip_how_to_use">How to use this tool?</span>
+    <button class="tooltip-toggle-btn" data-tooltip-target="renamer-tip" aria-expanded="false" aria-controls="renamer-tip">
+      <i class="fas fa-lightbulb tooltip-icon"></i> <span data-i18n="renamer_tooltip_how_to_use">Kako uporabljati to orodje?</span>
     </button>
-    
+
     <!-- Tooltip content -->
-    <div id="json-tip" class="tooltip-box hidden" aria-live="polite">
-      <p>💡 <strong data-i18n="renamer_tooltip_instructions_title">How to use the Easy File Renamer:</strong></p>
+    <div id="renamer-tip" class="tooltip-box hidden" aria-live="polite">
+      <p>💡 <strong data-i18n="renamer_tooltip_instructions_title">Kako uporabljati Enostavno preimenovanje datotek:</strong></p>
       <ul>
-        <li data-i18n="renamer_tooltip_step_dragdrop">📂 Drag & drop files or click to select multiple files or folders.</li>
-        <li data-i18n="renamer_tooltip_step_sort">🔀 Choose how you want to sort the files (manual drag reorder, filename, date, or leading number).</li>
-        <li data-i18n="renamer_tooltip_step_prefix">✏️ Enter a filename prefix, like <code>vacation</code> or <code>invoice</code>.</li>
-        <li data-i18n="renamer_tooltip_step_start_number">🔢 Set the starting number for your files. Use leading zeros for padding (e.g., <code>0050</code>).</li>
-        <li data-i18n="renamer_tooltip_step_underscore">➕ Optionally add an underscore before the number for clarity.</li>
-        <li data-i18n="renamer_tooltip_step_download">💾 Click <em>Rename & Download ZIP</em> to rename your files in batch and download them as a ZIP archive.</li>
+        <li data-i18n="renamer_tooltip_step_dragdrop">📂 Povlecite datoteke ali kliknite za izbiro več datotek ali map.</li>
+        <li data-i18n="renamer_tooltip_step_sort">🔀 Izberite način razvrščanja datotek (ročno, ime, datum ali začetna številka).</li>
+        <li data-i18n="renamer_tooltip_step_prefix">✏️ Vnesite predpono imena datoteke, npr. <code>počutnice</code> ali <code>račun</code>.</li>
+        <li data-i18n="renamer_tooltip_step_start_number">🔢 Nastavite začetno številko datotek. Uporabite začetne ničle za oblikovanje (npr. <code>0050</code>).</li>
+        <li data-i18n="renamer_tooltip_step_underscore">➕ Po želji dodajte podčrtaj pred številko za jasnost.</li>
+        <li data-i18n="renamer_tooltip_step_download">💾 Kliknite <em>Preimenuj & Prenesi ZIP</em> za paketno preimenovanje in prenos datotek kot ZIP.</li>
       </ul>
     </div>
-    
+
     <div class="input-row">
-        <button id="rename-btn" data-i18n="renamer_btn_rename_download">⬇️ Rename & Download ZIP</button>
-    <div class="input-row">
+      <button id="rename-btn" data-i18n="renamer_btn_rename_download">⬇️ Preimenuj & Prenesi ZIP</button>
+    </div>
+
   </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   <script src="../tooltip.js" defer></script>
   <script src="renamer.js" defer></script>
+  <script src="../translations/i18n.js" defer></script>
 </body>
 </html>
