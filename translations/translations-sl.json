@@ -209,7 +209,24 @@
   "qrgenerator_tooltipStep1": "Vnesite besedilo, URL ali podatke, ki jih želite kodirati.",
   "qrgenerator_tooltipStep2": "Kliknite 'Ustvari', da ustvarite QR kodo.",
   "qrgenerator_tooltipStep3": "Kliknite 'Prenesi', da shranite QR kodo.",
-
+  "qr_btn_more_options": "Več možnosti",
+  "qr_legend_style": "Slog",
+  "qr_style_square": "Kvadratni",
+  "qr_style_dots": "Pikčasti",
+  "qr_style_classy": "Elegantni",
+  "qr_legend_colors": "Barve",
+  "qr_label_dark_color": "Temna barva",
+  "qr_label_light_color": "Svetla barva",
+  "qr_legend_format": "Oblika",
+  "qr_format_select_label": "Izberite obliko QR kode",
+  "qr_format_png": "PNG",
+  "qr_format_jpeg": "JPEG",
+  "qr_format_webp": "WEBP",
+  "qr_format_svg": "SVG",
+  "qr_legend_logo": "Dodaj logotip",
+  "qr_logo_upload_label": "Naloži logotip",
+  "qr_btn_reset_options": "Ponastavi možnosti",
+  
   "unitconverter_header": "📏 Pretvornik enot",
   "unitconverter_description": "Pretvorite med metričnimi, imperialnimi enotami, časom in še več.",
   "unitconverter_categoryLabel": "Kategorija",
@@ -287,6 +304,7 @@
   "textcleaner_tooltipStep3": "Izberite možnosti čiščenja, kot so odstranjevanje posebnih znakov, obrezovanje presledkov ali vstavljanje ločil.",
   "textcleaner_tooltipStep4": "Kliknite 'Obdelaj', da si ogledate rezultate, ki jih lahko kopirate ali prenesete."
 }
+
 
 
 
