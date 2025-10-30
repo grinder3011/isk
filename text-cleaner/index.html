@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="cleaner.title">Text & Filename Cleaner Tool</title>
+  <title data-i18n="cleaner_title">Text & Filename Cleaner Tool</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 </head>
@@ -11,30 +11,30 @@
 
   <!-- Full-width header -->
   <header class="header">
-    <h1 class="tool-title" data-i18n="cleaner.header">Text & Filename Cleaner Tool</h1>
+    <h1 class="tool-title" data-i18n="cleaner_header">Text & Filename Cleaner Tool</h1>
   </header>
 
   <!-- Back/Home button -->
   <div class="back-home-wrapper">
-    <a href="../index.html" class="back-home-link" data-i18n="common_backHome">← Back to Home</a>
+    <a href="../index.html" class="back-home-link" data-i18n="back_home">← Back to Home</a>
   </div>
 
   <!-- Main content container -->
   <div class="container">
 
     <section id="mode-selection">
-      <h2 data-i18n="cleaner.selectTask">Select Task</h2>
+      <h2 data-i18n="cleaner_selectTask">Select Task</h2>
       <label>
         <input type="radio" name="inputMode" value="cleanFilenames" checked />
-        <span data-i18n="cleaner.cleanFilenames">Clean Filenames</span>
+        <span data-i18n="cleaner_cleanFilenames">Clean Filenames</span>
       </label>
       <label>
         <input type="radio" name="inputMode" value="cleanTextInput" />
-        <span data-i18n="cleaner.cleanTextInput">Clean Text</span>
+        <span data-i18n="cleaner_cleanTextInput">Clean Text</span>
       </label>
       <label>
         <input type="radio" name="inputMode" value="cleanTextFile" />
-        <span data-i18n="cleaner.cleanTextFile">Clean Uploaded Text Files</span>
+        <span data-i18n="cleaner_cleanTextFile">Clean Uploaded Text Files</span>
       </label>
     </section>
 
@@ -42,10 +42,10 @@
 
       <!-- Filenames input -->
       <div id="fileNamesInput" class="input-group">
-        <label for="fileNamesTextArea" data-i18n="cleaner.enterFilenamesLabel">Enter filenames (one per line):</label>
-        <textarea id="fileNamesTextArea" rows="6" placeholder="example.jpg&#10;my_file(1).png" data-i18n-placeholder="cleaner.filenamesPlaceholder"></textarea>
+        <label for="fileNamesTextArea" data-i18n="cleaner_enterFilenamesLabel">Enter filenames (one per line):</label>
+        <textarea id="fileNamesTextArea" rows="6" placeholder="" data-i18n-placeholder="cleaner_filenamesPlaceholder"></textarea>
 
-        <label for="fileUploadForNames" style="margin-top:15px; display:block;" data-i18n="cleaner.uploadFilesLabel">
+        <label for="fileUploadForNames" style="margin-top:15px; display:block;" data-i18n="cleaner_uploadFilesLabel">
           Or upload files (any type, max 50 MB each):
         </label>
         <input type="file" id="fileUploadForNames" multiple />
@@ -53,72 +53,72 @@
 
       <!-- Text input -->
       <div id="textInput" class="input-group hidden">
-        <label for="textInputArea" data-i18n="cleaner.enterTextLabel">Enter or paste text:</label>
-        <textarea id="textInputArea" rows="8" placeholder="Paste your text here..." data-i18n-placeholder="cleaner.textPlaceholder"></textarea>
+        <label for="textInputArea" data-i18n="cleaner_enterTextLabel">Enter or paste text:</label>
+        <textarea id="textInputArea" rows="8" placeholder="" data-i18n-placeholder="cleaner_textPlaceholder"></textarea>
       </div>
 
       <!-- Text file upload -->
       <div id="fileUploadInput" class="input-group hidden">
-        <label for="textFileUpload" data-i18n="cleaner.uploadTextFilesLabel">Upload one or more text files (.txt):</label>
+        <label for="textFileUpload" data-i18n="cleaner_uploadTextFilesLabel">Upload one or more text files (.txt):</label>
         <input type="file" id="textFileUpload" accept=".txt" multiple />
       </div>
     </section>
 
     <section id="options-section">
-      <h2 data-i18n="cleaner.cleaningOptions">Cleaning Options</h2>
+      <h2 data-i18n="cleaner_cleaningOptions">Cleaning Options</h2>
 
       <fieldset>
-        <legend data-i18n="cleaner.removeSpecialCharsLegend">Remove Special Characters</legend>
+        <legend data-i18n="cleaner_removeSpecialCharsLegend">Remove Special Characters</legend>
         <label>
           <input type="radio" name="specialCharRemoval" value="removeAll" checked />
-          <span data-i18n="cleaner.removeAll">Remove all special characters</span>
+          <span data-i18n="cleaner_removeAll">Remove all special characters</span>
         </label>
         <label>
           <input type="radio" name="specialCharRemoval" value="removeListed" />
-          <span data-i18n="cleaner.removeListed">Remove only selected characters</span>
+          <span data-i18n="cleaner_removeListed">Remove only selected characters</span>
         </label>
         <input
           type="text"
           id="listedCharsInput"
-          placeholder="Enter characters to remove (e.g. !@#$%)"
+          placeholder=""
           disabled
-          title="Enter characters you want to remove, without separators."
-          data-i18n-placeholder="cleaner.listedCharsPlaceholder"
-          data-i18n-title="cleaner.listedCharsTitle"
+          title=""
+          data-i18n-placeholder="cleaner_listedCharsPlaceholder"
+          data-i18n-title="cleaner_listedCharsTitle"
         />
       </fieldset>
 
       <fieldset>
-        <legend data-i18n="cleaner.otherOptionsLegend">Other Options</legend>
+        <legend data-i18n="cleaner_otherOptionsLegend">Other Options</legend>
         <label>
           <input type="checkbox" id="trimSpacesCheckbox" />
-          <span data-i18n="cleaner.trimSpaces">Trim extra spaces between words</span>
+          <span data-i18n="cleaner_trimSpaces">Trim extra spaces between words</span>
         </label>
 
         <label>
           <input type="checkbox" id="insertSeparatorCheckbox" />
-          <span data-i18n="cleaner.insertSeparator">Insert a separator between words</span>
+          <span data-i18n="cleaner_insertSeparator">Insert a separator between words</span>
         </label>
 
         <select id="separatorSelect" disabled>
-          <option value="-" data-i18n="cleaner.separatorDash">Dash (-)</option>
-          <option value="_" data-i18n="cleaner.separatorUnderscore">Underscore (_)</option>
-          <option value=" " data-i18n="cleaner.separatorSpace">Space</option>
+          <option value="-" data-i18n="cleaner_separatorDash">Dash (-)</option>
+          <option value="_" data-i18n="cleaner_separatorUnderscore">Underscore (_)</option>
+          <option value=" " data-i18n="cleaner_separatorSpace">Space</option>
         </select>
       </fieldset>
     </section>
 
     <section id="action-section">
-      <button id="processButton" data-i18n="cleaner.process">Process</button>
+      <button id="processButton" data-i18n="cleaner_process">Process</button>
     </section>
 
     <section id="output-section">
-      <h2 data-i18n="cleaner.outputHeader">Preview & Actions</h2>
-      <textarea id="outputPreview" rows="10" readonly placeholder="Processed output will appear here..." data-i18n-placeholder="cleaner.outputPlaceholder"></textarea>
+      <h2 data-i18n="cleaner_outputHeader">Preview & Actions</h2>
+      <textarea id="outputPreview" rows="10" readonly placeholder="" data-i18n-placeholder="cleaner_outputPlaceholder"></textarea>
 
       <div id="downloadButtons" class="hidden" style="margin-top:10px;">
-        <button id="downloadButton" data-i18n="cleaner.downloadResult">Download Result</button>
-        <button id="copyLogButton" style="margin-left: 10px;" data-i18n="cleaner.copyLog">Copy Log</button>
+        <button id="downloadButton" data-i18n="cleaner_downloadResult">Download Result</button>
+        <button id="copyLogButton" style="margin-left: 10px;" data-i18n="cleaner_copyLog">Copy Log</button>
       </div>
     </section>
 
