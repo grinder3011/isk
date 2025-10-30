@@ -40,6 +40,7 @@
   "footer_contact": "Pišite mi",
 
   "common_backHome": "← Nazaj na domačo stran",
+  "back_home": "← Nazaj na domačo stran",
 
   "renamer_header": "📝 Preimenovalnik datotek",
   "renamer_instructions": "Izberite datoteke, nastavite pravila in kliknite »Preimenuj«.",
@@ -85,26 +86,22 @@
   "jsonformatter_tooltip2": "Kliknite »Oblikuj« za lepši prikaz.",
   "jsonformatter_tooltip3": "Kliknite »Preveri« za preverjanje napak.",
   "jsonformatter_tooltip4": "Prenesite ali kopirajte oblikovan JSON.",
-
-  "wordcounter_header": "📄🔢 Števec besed in znakov +",
-  "wordcounter_placeholder": "Začnite tipkati ali prilepite besedilo tukaj...",
-  "wordcounter_howtoTitle": "💡 Kako uporabljati števec:",
-  "wordcounter_howto1": "Vnesite ali prilepite besedilo.",
-  "wordcounter_howto2": "Orodje šteje besede, znake, stavke in unikatne besede.",
-  "wordcounter_results": "Rezultati",
-  "wordcounter_words": "Besede",
-  "wordcounter_characters": "Znaki",
-  "wordcounter_noSpaces": "Znaki (brez presledkov)",
-  "wordcounter_sentences": "Stavki",
-  "wordcounter_uniqueWords": "Unikatne besede",
+  
+  "wordcounter_header": "📄🔢 Števec besed in znakov",
+  "wordcounter_description": "Štejte besede, znake in presledke v besedilu.",
+  "wordcounter_inputPlaceholder": "Začnite tipkati ali prilepite besedilo tukaj...",
+  "wordcounter_tooltipTitle": "💡 Kako uporabljati Word & Character Counter:",
+  "wordcounter_tooltipStep1": "Vnesite ali prilepite besedilo za analizo.",
+  "wordcounter_tooltipStep2": "Rezultati vključujejo besede, znake, stavke in unikatne besede.",
+  "wordcounter_tooltipStep3": "Uporabite 'Ponastavi', da počistite vse.",
   "wordcounter_moreOptions": "Več možnosti",
-  "wordcounter_copyResults": "Kopiraj rezultate",
-  "wordcounter_downloadResults": "Prenesi rezultate",
-  "wordcounter_reset": "Ponastavi",
-  "wordcounter_uppercase": "VELIKE ČRKE",
-  "wordcounter_lowercase": "male črke",
-  "wordcounter_titlecase": "Naslovne črke",
-
+  "wordcounter_words_label": "Besede",
+  "wordcounter_chars_label": "Znaki",
+  "wordcounter_chars_no_spaces_label": "Znaki (brez presledkov)",
+  "wordcounter_sentences_label": "Stavki",
+  "wordcounter_unique_label": "Unikatne besede",
+  "wordcounter_copy_results_title": "Kopiraj rezultate",
+  "wordcounter_download_results_title": "Prenesi rezultate"
   "imagecropper_header": "🖼️ Enostavni obrezovalnik slik",
   "imagecropper_upload": "📂 Naloži sliko",
   "imagecropper_drawCrop": "✏️ Nariši novo območje obreza",
@@ -121,7 +118,7 @@
   "imagecropper_tooltip3": "Po potrebi povečajte ali pomanjšajte sliko.",
   "imagecropper_tooltip4": "Kliknite »Obreži« za predogled in prenos.",
   
-    "cleaner_title": "Čistilec besedil in imen datotek",
+  "cleaner_title": "Čistilec besedil in imen datotek",
   "cleaner_header": "🧹 Čistilec besedil in imen datotek",
   "cleaner_backHome": "← Nazaj na domačo stran",
   "cleaner_selectTask": "Izberite nalogo",
@@ -273,3 +270,4 @@
   "textcleaner_tooltipStep3": "Izberite možnosti čiščenja, kot so odstranjevanje posebnih znakov, obrezovanje presledkov ali vstavljanje ločil.",
   "textcleaner_tooltipStep4": "Kliknite 'Obdelaj', da si ogledate rezultate, ki jih lahko kopirate ali prenesete."
 }
+
