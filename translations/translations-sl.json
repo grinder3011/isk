@@ -72,6 +72,8 @@
   "unitconverter_tooltip3": "Izberite decimalno ločilo (pika ali vejica).",
   "unitconverter_tooltip4": "Kliknite »Pretvori« za prikaz rezultatov.",
   "unitconverter_tooltip5": "S klikom »Kopiraj« kopirajte rezultate ali jih prenesite kot datoteko.",
+  "unitconverter_decimalPeriod": "Pika (.)",
+  "unitconverter_decimalComma": "Vejica (,)",
 
   "jsonformatter_header": "🧾 Oblikovalnik / Preverjalnik JSON",
   "jsonformatter_upload": "📁 Naloži JSON",
@@ -282,4 +284,5 @@
   "textcleaner_tooltipStep3": "Izberite možnosti čiščenja, kot so odstranjevanje posebnih znakov, obrezovanje presledkov ali vstavljanje ločil.",
   "textcleaner_tooltipStep4": "Kliknite 'Obdelaj', da si ogledate rezultate, ki jih lahko kopirate ali prenesete."
 }
+
 
