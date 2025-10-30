@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="qrgenerator_header">🔳 Generator QR kod</title>
+  <title data-i18n="qrgenerator_header">🔳 QR Code Generator</title>
   <link rel="stylesheet" href="qr.styles.css" />
   <link rel="stylesheet" href="../tooltip.styles.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
@@ -13,74 +13,74 @@
   <!-- Header container -->
   <div class="container">
     <header class="tool-header">
-      <h1 data-i18n="qrgenerator_header">🔳 Generator QR kod</h1>
-      <p data-i18n="qrgenerator_description">Ustvarite QR kode za URL-je, besedilo ali podatke, z možnostjo stila in logotipa.</p>
+      <h1 data-i18n="qrgenerator_header">🔳 QR Code Generator</h1>
+      <p data-i18n="qrgenerator_description">Generate custom QR codes for URLs, text, or any data, with optional styling and logos.</p>
     </header>
   </div>
 
-  <!-- Back to home button outside header container -->
+  <!-- Back to home button -->
   <div class="back-home-wrapper">
-    <a href="https://grinder3011.github.io/isk/" class="back-home-link" data-i18n="common_backHome">← Nazaj na domačo stran</a>
+    <a href="https://grinder3011.github.io/isk/" class="back-home-link" data-i18n="common_backHome">← Back to Home</a>
   </div>
 
   <!-- Main content section -->
   <main class="main-content">
 
-    <label for="qr-input" class="sr-only" data-i18n="qrgenerator_inputPlaceholder">Vnesite besedilo ali URL</label>
+    <label for="qr-input" class="sr-only" data-i18n="qrgenerator_inputPlaceholder">Enter text or URL</label>
     <input type="text" id="qr-input" placeholder="" data-i18n-placeholder="qrgenerator_inputPlaceholder" autocomplete="off" spellcheck="false" aria-describedby="qr-input-desc" />
-    <div id="qr-input-desc" class="sr-only" data-i18n="qrgenerator_inputPlaceholder">Vnesite besedilo ali URL za generiranje QR kode</div>
+    <div id="qr-input-desc" class="sr-only" data-i18n="qrgenerator_inputPlaceholder">Enter text or URL to generate a QR code</div>
 
     <div class="button-row">
       <button id="generate-btn" class="btn primary-btn">
         <img src="qr-koda.png" alt="QR Code Icon" style="width: 20px; height: 20px; margin-right: 8px;">
-        <span data-i18n="qrgenerator_generateBtn">Ustvari</span>
+        <span data-i18n="qrgenerator_generateBtn">Generate</span>
       </button>
-      <button id="download-btn" class="btn secondary-btn"><i class="fas fa-download"></i> <span data-i18n="qrgenerator_downloadBtn">⬇️ Prenesi</span></button>
+      <button id="download-btn" class="btn secondary-btn"><i class="fas fa-download"></i> <span data-i18n="qrgenerator_downloadBtn">⬇️ Download</span></button>
     </div>
 
     <div id="qrcode" class="qr-code-container" aria-live="polite"></div>
 
     <!-- Tooltip trigger -->
     <button class="tooltip-toggle-btn" data-tooltip-target="qr-tip" aria-expanded="false" aria-controls="qr-tip">
-      <i class="fas fa-lightbulb tooltip-icon"></i> <span data-i18n="qrgenerator_tooltipTitle">💡 Kako uporabljati QR Code Generator:</span>
+      <i class="fas fa-lightbulb tooltip-icon"></i> <span data-i18n="qrgenerator_tooltipTitle">💡 How to use the QR Code Generator:</span>
     </button>
 
     <div id="qr-tip" class="tooltip-box hidden" aria-live="polite">
-      <p>💡 <strong data-i18n="qrgenerator_tooltipTitle">Kako uporabljati QR Code Generator:</strong></p>
+      <p>💡 <strong data-i18n="qrgenerator_tooltipTitle">How to use the QR Code Generator:</strong></p>
       <ul>
-        <li data-i18n="qrgenerator_tooltipStep1">Vnesite besedilo, URL ali podatke, ki jih želite kodirati.</li>
-        <li data-i18n="qrgenerator_tooltipStep2">Kliknite 'Ustvari', da ustvarite QR kodo.</li>
-        <li data-i18n="qrgenerator_tooltipStep3">Kliknite 'Prenesi', da shranite QR kodo.</li>
+        <li data-i18n="qrgenerator_tooltipStep1">Enter the text, URL, or data you want to encode.</li>
+        <li data-i18n="qrgenerator_tooltipStep2">Click 'Generate' to create your QR code.</li>
+        <li data-i18n="qrgenerator_tooltipStep3">Click 'Download' to save the QR code.</li>
       </ul>
     </div>
 
     <button id="toggle-options-btn" class="btn toggle-options-btn" aria-expanded="false" aria-controls="more-options" type="button">
-      <span class="options-label" data-i18n="qr_btn_more_options">Več možnosti</span>
+      <span class="options-label" data-i18n="qr_btn_more_options">More options</span>
       <i class="fas fa-chevron-down arrow"></i>
     </button>
 
     <section id="more-options" class="more-options" hidden>
       <fieldset class="fieldset-style">
-        <legend data-i18n="qr_legend_style">Stil</legend>
+        <legend data-i18n="qr_legend_style">Style</legend>
         <label>
           <input type="radio" name="style" value="square" checked />
-          <i class="fas fa-th-large"></i> <span data-i18n="qr_style_square">Kvadrat</span>
+          <i class="fas fa-th-large"></i> <span data-i18n="qr_style_square">Square</span>
         </label>
         <label>
           <input type="radio" name="style" value="dots" />
-          <i class="fas fa-circle-dot"></i> <span data-i18n="qr_style_dots">Pike</span>
+          <i class="fas fa-circle-dot"></i> <span data-i18n="qr_style_dots">Dots</span>
         </label>
         <label>
           <input type="radio" name="style" value="classy" />
-          <i class="fas fa-gem"></i> <span data-i18n="qr_style_classy">Eleganten</span>
+          <i class="fas fa-gem"></i> <span data-i18n="qr_style_classy">Classy</span>
         </label>
       </fieldset>
 
       <fieldset class="fieldset-color">
-        <legend data-i18n="qr_legend_colors">Barve</legend>
-        <label for="color-dark" data-i18n="qr_label_dark_color">Temna barva</label>
+        <legend data-i18n="qr_legend_colors">Colors</legend>
+        <label for="color-dark" data-i18n="qr_label_dark_color">Dark Color</label>
         <input type="color" id="color-dark" value="#000000" />
-        <label for="color-light" data-i18n="qr_label_light_color">Svetla barva</label>
+        <label for="color-light" data-i18n="qr_label_light_color">Light Color</label>
         <input type="color" id="color-light" value="#ffffff" />
       </fieldset>
 
@@ -95,12 +95,12 @@
       </fieldset>
 
       <fieldset class="fieldset-logo extra-spacing">
-        <legend data-i18n="qr_legend_logo">Dodaj logotip</legend>
+        <legend data-i18n="qr_legend_logo">Add Logo</legend>
         <input type="file" id="logo-upload" accept="image/*" aria-label="" data-i18n-label="qr_logo_upload_label" />
       </fieldset>
 
       <button id="reset-btn" class="btn reset-btn extra-spacing">
-        <i class="fas fa-undo"></i> <span data-i18n="qr_btn_reset_options">Ponastavi nastavitve</span>
+        <i class="fas fa-undo"></i> <span data-i18n="qr_btn_reset_options">Reset options</span>
       </button>
     </section>
 
