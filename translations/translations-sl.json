@@ -49,7 +49,7 @@
   "renamer_prefix": "Predpona",
   "renamer_suffix": "Pripona",
   "renamer_replace": "Zamenjaj besedilo",
-  "renamer_with": "Z",
+  "renamer_with": "Zamenjaj z",
   "renamer_preview": "Predogled imen",
   "renamer_rename": "Preimenuj",
   "renamer_reset": "Ponastavi",
@@ -287,6 +287,7 @@
   "textcleaner_tooltipStep3": "Izberite možnosti čiščenja, kot so odstranjevanje posebnih znakov, obrezovanje presledkov ali vstavljanje ločil.",
   "textcleaner_tooltipStep4": "Kliknite 'Obdelaj', da si ogledate rezultate, ki jih lahko kopirate ali prenesete."
 }
+
 
 
 
