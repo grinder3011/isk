@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="pdfmerger_header">📄 Preprost združevalnik PDF</title>
+  <title data-i18n="pdfmerger_header">📄 Simple PDF Merger</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../tooltip.styles.css?v=3">
   <link rel="stylesheet" href="pdfmerger.styles.css" />
@@ -13,13 +13,13 @@
 
   <!-- Full-width header -->
   <header class="tool-header">
-    <h1 data-i18n="pdfmerger_header">📄 Preprost združevalnik PDF</h1>
-    <p data-i18n="pdfmerger_description">Naložite in združite več PDF dokumentov hitro in enostavno.</p>
+    <h1 data-i18n="pdfmerger_header">📄 Simple PDF Merger</h1>
+    <p data-i18n="pdfmerger_description">Upload and merge multiple PDF files quickly and easily.</p>
   </header>
 
   <!-- Back to home button under header -->
   <div class="back-home-wrapper">
-    <a href="https://grinder3011.github.io/isk/" class="back-home-link" data-i18n="common_backHome">← Nazaj na domačo stran</a>
+    <a href="https://grinder3011.github.io/isk/" class="back-home-link" data-i18n="common_backHome">← Back to Home</a>
   </div>
 
   <!-- Main content centered -->
@@ -28,31 +28,31 @@
     <!-- Drag & Drop Upload Area -->
     <label id="drop-zone" for="file-input" tabindex="0" role="button" aria-label="Upload PDF files" data-i18n-label="pdfmerger_dropZone">
       <div class="drop-icon">📁⬆️</div>
-      <div class="drop-text" data-i18n="pdfmerger_dropZone">Povlecite ali kliknite za naložitev PDF-jev</div>
+      <div class="drop-text" data-i18n="pdfmerger_dropZone">Drag & Drop or Click to Upload PDF files</div>
     </label>
     <input type="file" id="file-input" accept="application/pdf" multiple hidden />
 
     <div id="preview-list" class="preview-list"></div>
 
     <div class="buttons">
-      <button id="merge-btn" data-i18n="pdfmerger_mergeBtn">🔗 Združi PDF-je</button>
-      <button id="reset-btn" data-i18n="pdfmerger_resetBtn">🔄 Ponastavi</button>
-      <button id="download-btn" style="display: none" data-i18n="pdfmerger_downloadBtn">⬇️ Prenesi</button>
+      <button id="merge-btn" data-i18n="pdfmerger_mergeBtn">🔗 Merge PDFs</button>
+      <button id="reset-btn" data-i18n="pdfmerger_resetBtn">🔄 Reset</button>
+      <button id="download-btn" style="display: none" data-i18n="pdfmerger_downloadBtn">⬇️ Download</button>
     </div>
 
     <!-- Tooltip / Accordion -->
     <div class="accordion-container">
       <button class="tooltip-toggle-btn" data-tooltip-target="pdfmerger-tip" aria-expanded="false" aria-controls="pdfmerger-tip">
-        <i class="fas fa-lightbulb tooltip-icon"></i> <span data-i18n="pdfmerger_tooltipTitle">💡 Kako uporabljati PDF Merger:</span>
+        <i class="fas fa-lightbulb tooltip-icon"></i> <span data-i18n="pdfmerger_tooltipTitle">💡 How to use PDF Merger:</span>
       </button>
 
       <div id="pdfmerger-tip" class="tooltip-box hidden" aria-live="polite">
-        <p>💡 <strong data-i18n="pdfmerger_tooltipTitle">Kako uporabljati PDF Merger:</strong></p>
+        <p>💡 <strong data-i18n="pdfmerger_tooltipTitle">How to use PDF Merger:</strong></p>
         <ul>
-          <li data-i18n="pdfmerger_tooltipStep1">Povlecite ali izberite več PDF-jev za nalaganje.</li>
-          <li data-i18n="pdfmerger_tooltipStep2">Kliknite 'Združi PDF-je', da ustvarite eno datoteko.</li>
-          <li data-i18n="pdfmerger_tooltipStep3">Kliknite 'Prenesi', da shranite združeni PDF.</li>
-          <li data-i18n="pdfmerger_tooltipStep4">Uporabite 'Ponastavi', da začnete znova.</li>
+          <li data-i18n="pdfmerger_tooltipStep1">Drag & drop or select multiple PDF files to upload.</li>
+          <li data-i18n="pdfmerger_tooltipStep2">Click 'Merge PDFs' to combine them into one file.</li>
+          <li data-i18n="pdfmerger_tooltipStep3">Click 'Download' to save the merged PDF.</li>
+          <li data-i18n="pdfmerger_tooltipStep4">Use 'Reset' to start over.</li>
         </ul>
       </div>
     </div>
@@ -63,11 +63,11 @@
   <div id="usage-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="usage-toggle">
     <div class="modal-content">
       <button class="modal-close" aria-label="Close" data-i18n-alt="pdfmerger_modal_close">&times;</button>
-      <h2 data-i18n="pdfmerger_tooltipTitle">Kako uporabljati PDF Merger</h2>
+      <h2 data-i18n="pdfmerger_tooltipTitle">How to use PDF Merger</h2>
       <p data-i18n="pdfmerger_modal_text">
-        Povlecite ali izberite svoje PDF-je v območju za nalaganje. 
-        Nato kliknite <strong>Združi PDF-je</strong>. Ko je združevanje končano, lahko prenesete rezultat. 
-        Uporabite <strong>Ponastavi</strong>, da počistite vse.
+        Drag & drop or select your PDF files in the upload area.
+        Then click <strong>Merge PDFs</strong>. Once the merge is done, you can download the result.
+        Use <strong>Reset</strong> to clear everything.
       </p>
     </div>
   </div>
