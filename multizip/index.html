@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="multizip_page_title">MultiZip Tool</title>
+  <title data-i18n="multizip_header">📦 Quick-Multi Zip</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../tooltip.styles.css?v=3">
   <link rel="stylesheet" href="multizip.styles.css" />
@@ -13,47 +13,48 @@
 
   <!-- Full-width header -->
   <header class="tool-header">
-    <h1 data-i18n="multizip_header_title">📦 Quick-Multi Zip</h1>
-    <p data-i18n="multizip_header_subtitle">Select your files to zip quickly and download them.</p>
+    <h1 data-i18n="multizip_header">📦 Quick-Multi Zip</h1>
+    <p data-i18n="multizip_description">Izberite datoteke za hitro stiskanje in prenos v ZIP.</p>
   </header>
 
   <!-- Back button under header -->
   <div class="back-home-wrapper">
-    <a href="https://grinder3011.github.io/isk/" class="back-home-link" data-i18n="back_home">← Back to Home</a>
+    <a href="https://grinder3011.github.io/isk/" class="back-home-link" data-i18n="common_backHome">← Nazaj na domačo stran</a>
   </div>
 
   <!-- Main container centered -->
   <div class="container">
     <div class="tool-wrapper">
-      <input type="file" id="fileInput" multiple />
+      <input type="file" id="fileInput" multiple data-i18n-label="multizip_inputFile" />
       <div id="fileList"></div>
 
       <!-- Tooltip trigger -->
-      <button class="tooltip-toggle-btn" data-tooltip-target="json-tip" aria-expanded="false" aria-controls="json-tip">
-        <i class="fas fa-lightbulb tooltip-icon"></i> <span data-i18n="multizip_tooltip_how_to_use">How to use this tool?</span>
+      <button class="tooltip-toggle-btn" data-tooltip-target="multizip-tip" aria-expanded="false" aria-controls="multizip-tip">
+        <i class="fas fa-lightbulb tooltip-icon"></i> <span data-i18n="multizip_tooltipTitle">💡 Kako uporabljati MultiZip:</span>
       </button>
 
       <!-- Tooltip content -->
-      <div id="json-tip" class="tooltip-box hidden" aria-live="polite">
-        <p>💡 <strong data-i18n="multizip_tooltip_title">How to use this tool:</strong></p>
+      <div id="multizip-tip" class="tooltip-box hidden" aria-live="polite">
+        <p>💡 <strong data-i18n="multizip_tooltipTitle">Kako uporabljati MultiZip:</strong></p>
         <ul>
-          <li data-i18n="multizip_tooltip_step_select">📁 Use the file picker to select one or more files. New files are added or replace existing ones with the same name.</li>
-          <li data-i18n="multizip_tooltip_step_remove">🗑️ Remove individual files from the list by clicking the ❌ button next to each filename.</li>
-          <li data-i18n="multizip_tooltip_step_create">📦 Click <strong>Create Archive</strong> to prepare the zip file once you’re happy with your selection.</li>
-          <li data-i18n="multizip_tooltip_step_download">⬇️ Use <strong>Download Archive</strong> to save the zip file to your device.</li>
-          <li data-i18n="multizip_tooltip_step_reset">🔄 Click <strong>Remove All Files</strong> to clear the entire selection and start fresh.</li>
+          <li data-i18n="multizip_tooltipStep1">Uporabite izbirnik datotek za izbiro ene ali več datotek.</li>
+          <li data-i18n="multizip_tooltipStep2">Odstranite posamezne datoteke s klikom na gumb ❌ poleg vsake datoteke.</li>
+          <li data-i18n="multizip_tooltipStep3">Kliknite 'Ustvari arhiv', ko ste zadovoljni z izbiro.</li>
+          <li data-i18n="multizip_tooltipStep4">Kliknite 'Prenesi arhiv', da shranite ZIP datoteko.</li>
+          <li data-i18n="multizip_tooltipStep5">Kliknite 'Odstrani vse datoteke', da začnete znova.</li>
         </ul>
       </div>
       
       <div class="actions">
-        <button id="createZipBtn" data-i18n="multizip_btn_create">📦 Create Archive</button>
-        <button id="downloadBtn" data-i18n="multizip_btn_download">⬇️ Download Archive</button>
-        <button id="resetBtn" data-i18n="multizip_btn_reset">🔄 Remove All Files</button>
+        <button id="createZipBtn" data-i18n="multizip_btn_create">📦 Ustvari arhiv</button>
+        <button id="downloadBtn" data-i18n="multizip_btn_download">⬇️ Prenesi</button>
+        <button id="resetBtn" data-i18n="multizip_btn_reset">🔄 Odstrani vse datoteke</button>
       </div>
     </div> <!-- /.tool-wrapper -->
   </div> <!-- /.container -->
 
-  <script src="../tooltip.js"></script>
+  <script src="../tooltip.js" defer></script>
   <script src="multizip.js"></script>
+  <script src="../translations/i18n.js" defer></script>
 </body>
 </html>
