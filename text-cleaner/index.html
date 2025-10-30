@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="cleaner.title">Orodje za čiščenje besedila in imen datotek</title>
+  <title data-i18n="cleaner.title">Text & Filename Cleaner Tool</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 </head>
@@ -11,30 +11,30 @@
 
   <!-- Full-width header -->
   <header class="header">
-    <h1 class="tool-title" data-i18n="cleaner.header">Orodje za čiščenje besedila in imen datotek</h1>
+    <h1 class="tool-title" data-i18n="cleaner.header">Text & Filename Cleaner Tool</h1>
   </header>
 
   <!-- Back/Home button -->
   <div class="back-home-wrapper">
-    <a href="../index.html" class="back-home-link" data-i18n="common_backHome">← Nazaj na domačo stran</a>
+    <a href="../index.html" class="back-home-link" data-i18n="common_backHome">← Back to Home</a>
   </div>
 
-  <!-- Main content container (centered) -->
+  <!-- Main content container -->
   <div class="container">
 
     <section id="mode-selection">
-      <h2 data-i18n="cleaner.selectTask">Izberite nalogo</h2>
+      <h2 data-i18n="cleaner.selectTask">Select Task</h2>
       <label>
         <input type="radio" name="inputMode" value="cleanFilenames" checked />
-        <span data-i18n="cleaner.cleanFilenames">Očistite imena datotek</span>
+        <span data-i18n="cleaner.cleanFilenames">Clean Filenames</span>
       </label>
       <label>
         <input type="radio" name="inputMode" value="cleanTextInput" />
-        <span data-i18n="cleaner.cleanTextInput">Očistite besedilo</span>
+        <span data-i18n="cleaner.cleanTextInput">Clean Text</span>
       </label>
       <label>
         <input type="radio" name="inputMode" value="cleanTextFile" />
-        <span data-i18n="cleaner.cleanTextFile">Očistite naložene besedilne datoteke</span>
+        <span data-i18n="cleaner.cleanTextFile">Clean Uploaded Text Files</span>
       </label>
     </section>
 
@@ -42,83 +42,83 @@
 
       <!-- Filenames input -->
       <div id="fileNamesInput" class="input-group">
-        <label for="fileNamesTextArea" data-i18n="cleaner.enterFilenamesLabel">Vnesite imena datotek (eno na vrstico):</label>
+        <label for="fileNamesTextArea" data-i18n="cleaner.enterFilenamesLabel">Enter filenames (one per line):</label>
         <textarea id="fileNamesTextArea" rows="6" placeholder="example.jpg&#10;my_file(1).png" data-i18n-placeholder="cleaner.filenamesPlaceholder"></textarea>
 
         <label for="fileUploadForNames" style="margin-top:15px; display:block;" data-i18n="cleaner.uploadFilesLabel">
-          Ali naložite datoteke (katerekoli vrste, max 50 MB na datoteko):
+          Or upload files (any type, max 50 MB each):
         </label>
         <input type="file" id="fileUploadForNames" multiple />
       </div>
 
       <!-- Text input -->
       <div id="textInput" class="input-group hidden">
-        <label for="textInputArea" data-i18n="cleaner.enterTextLabel">Vnesite ali prilepite besedilo:</label>
-        <textarea id="textInputArea" rows="8" placeholder="Prilepite besedilo tukaj..." data-i18n-placeholder="cleaner.textPlaceholder"></textarea>
+        <label for="textInputArea" data-i18n="cleaner.enterTextLabel">Enter or paste text:</label>
+        <textarea id="textInputArea" rows="8" placeholder="Paste your text here..." data-i18n-placeholder="cleaner.textPlaceholder"></textarea>
       </div>
 
       <!-- Text file upload -->
       <div id="fileUploadInput" class="input-group hidden">
-        <label for="textFileUpload" data-i18n="cleaner.uploadTextFilesLabel">Naložite eno ali več besedilnih datotek (.txt):</label>
+        <label for="textFileUpload" data-i18n="cleaner.uploadTextFilesLabel">Upload one or more text files (.txt):</label>
         <input type="file" id="textFileUpload" accept=".txt" multiple />
       </div>
     </section>
 
     <section id="options-section">
-      <h2 data-i18n="cleaner.cleaningOptions">Možnosti čiščenja</h2>
+      <h2 data-i18n="cleaner.cleaningOptions">Cleaning Options</h2>
 
       <fieldset>
-        <legend data-i18n="cleaner.removeSpecialCharsLegend">Odstrani posebne znake</legend>
+        <legend data-i18n="cleaner.removeSpecialCharsLegend">Remove Special Characters</legend>
         <label>
           <input type="radio" name="specialCharRemoval" value="removeAll" checked />
-          <span data-i18n="cleaner.removeAll">Odstrani vse posebne znake</span>
+          <span data-i18n="cleaner.removeAll">Remove all special characters</span>
         </label>
         <label>
           <input type="radio" name="specialCharRemoval" value="removeListed" />
-          <span data-i18n="cleaner.removeListed">Odstrani samo izbrane posebne znake</span>
+          <span data-i18n="cleaner.removeListed">Remove only selected characters</span>
         </label>
         <input
           type="text"
           id="listedCharsInput"
-          placeholder="Navedite znake za odstranitev (npr. !@#$%)"
+          placeholder="Enter characters to remove (e.g. !@#$%)"
           disabled
-          title="Vnesite znake, ki jih želite odstraniti, brez ločil."
+          title="Enter characters you want to remove, without separators."
           data-i18n-placeholder="cleaner.listedCharsPlaceholder"
           data-i18n-title="cleaner.listedCharsTitle"
         />
       </fieldset>
 
       <fieldset>
-        <legend data-i18n="cleaner.otherOptionsLegend">Druge možnosti</legend>
+        <legend data-i18n="cleaner.otherOptionsLegend">Other Options</legend>
         <label>
           <input type="checkbox" id="trimSpacesCheckbox" />
-          <span data-i18n="cleaner.trimSpaces">Odstrani odvečne presledke med besedami</span>
+          <span data-i18n="cleaner.trimSpaces">Trim extra spaces between words</span>
         </label>
 
         <label>
           <input type="checkbox" id="insertSeparatorCheckbox" />
-          <span data-i18n="cleaner.insertSeparator">Vstavi ločilo med besedami</span>
+          <span data-i18n="cleaner.insertSeparator">Insert a separator between words</span>
         </label>
 
         <select id="separatorSelect" disabled>
-          <option value="-" data-i18n="cleaner.separatorDash">Vzporednica (-)</option>
-          <option value="_" data-i18n="cleaner.separatorUnderscore">Podčrtaj (_)</option>
-          <option value=" " data-i18n="cleaner.separatorSpace">Presledek</option>
+          <option value="-" data-i18n="cleaner.separatorDash">Dash (-)</option>
+          <option value="_" data-i18n="cleaner.separatorUnderscore">Underscore (_)</option>
+          <option value=" " data-i18n="cleaner.separatorSpace">Space</option>
         </select>
       </fieldset>
     </section>
 
     <section id="action-section">
-      <button id="processButton" data-i18n="cleaner.process">Obdelaj</button>
+      <button id="processButton" data-i18n="cleaner.process">Process</button>
     </section>
 
     <section id="output-section">
-      <h2 data-i18n="cleaner.outputHeader">Predogled in dejanja</h2>
-      <textarea id="outputPreview" rows="10" readonly placeholder="Obdelani izhod se bo prikazal tukaj..." data-i18n-placeholder="cleaner.outputPlaceholder"></textarea>
+      <h2 data-i18n="cleaner.outputHeader">Preview & Actions</h2>
+      <textarea id="outputPreview" rows="10" readonly placeholder="Processed output will appear here..." data-i18n-placeholder="cleaner.outputPlaceholder"></textarea>
 
       <div id="downloadButtons" class="hidden" style="margin-top:10px;">
-        <button id="downloadButton" data-i18n="cleaner.downloadResult">Prenesi rezultat</button>
-        <button id="copyLogButton" style="margin-left: 10px;" data-i18n="cleaner.copyLog">Kopiraj zapis</button>
+        <button id="downloadButton" data-i18n="cleaner.downloadResult">Download Result</button>
+        <button id="copyLogButton" style="margin-left: 10px;" data-i18n="cleaner.copyLog">Copy Log</button>
       </div>
     </section>
 
