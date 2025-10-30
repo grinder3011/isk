@@ -102,6 +102,18 @@
   "wordcounter_unique_label": "Unikatne besede",
   "wordcounter_copy_results_title": "Kopiraj rezultate",
   "wordcounter_download_results_title": "Prenesi rezultate",
+  "wordcounter_count_spaces": "Štej presledke",
+  "wordcounter_ignore_punct": "Prezri ločila",
+  "wordcounter_enable_sentences": "Omogoči štetje stavkov",
+  "wordcounter_exclude_1_letter": "Izključi enomestne besede",
+  "wordcounter_exclude_2_letter": "Izključi dvomestne besede",
+  "wordcounter_uppercase_btn": "VELIKE ČRKE",
+  "wordcounter_lowercase_btn": "male črke",
+  "wordcounter_titlecase_btn": "Naslovne Črke",
+  "wordcounter_copy_original": "Kopiraj izvirno besedilo",
+  "wordcounter_download_original": "Prenesi izvirno besedilo",
+  "wordcounter_reset_btn": "Ponastavi",
+  
   "imagecropper_header": "🖼️ Enostavni obrezovalnik slik",
   "imagecropper_upload": "📂 Naloži sliko",
   "imagecropper_drawCrop": "✏️ Nariši novo območje obreza",
@@ -270,3 +282,4 @@
   "textcleaner_tooltipStep3": "Izberite možnosti čiščenja, kot so odstranjevanje posebnih znakov, obrezovanje presledkov ali vstavljanje ločil.",
   "textcleaner_tooltipStep4": "Kliknite 'Obdelaj', da si ogledate rezultate, ki jih lahko kopirate ali prenesete."
 }
+
