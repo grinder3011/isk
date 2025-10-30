@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="jsonformatter_header">🧩 Oblikovalnik & preverjalnik JSON</title>  
+  <title data-i18n="jsonformatter_header">🧩 JSON Formatter & Validator</title>  
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../tooltip.styles.css?v=3">
   <link rel="stylesheet" href="JSONFormatter.styles.css" />
@@ -11,45 +11,45 @@
 <body>
   <!-- Full-width header with title and icon -->
   <header class="header">
-    <h1 class="tool-title">🧾 <span data-i18n="jsonformatter_header">Oblikovalnik & preverjalnik JSON</span></h1>
+    <h1 class="tool-title">🧾 <span data-i18n="jsonformatter_header">JSON Formatter & Validator</span></h1>
   </header>
 
   <div class="back-home-wrapper">
-    <a href="https://grinder3011.github.io/isk/" class="back-home-link" data-i18n="common_backHome">← Nazaj na domačo stran</a>
+    <a href="https://grinder3011.github.io/isk/" class="back-home-link" data-i18n="common_backHome">← Back to Home</a>
   </div>
 
   <main class="container">
     <!-- Upload button -->
-    <label for="upload-json" class="upload-label" title="Naloži JSON" data-i18n-title="jsonformatter_upload">
-      📁 <span data-i18n="jsonformatter_upload">Naloži JSON</span>
+    <label for="upload-json" class="upload-label" title="Upload JSON" data-i18n-title="jsonformatter_upload">
+      📁 <span data-i18n="jsonformatter_upload">Upload JSON</span>
       <input type="file" id="upload-json" accept=".json,application/json" hidden />
     </label>
 
     <!-- JSON input area -->
-    <textarea id="json-input" placeholder="Prilepite ali vnesite svoj JSON tukaj..." spellcheck="false" data-i18n-placeholder="jsonformatter_inputPlaceholder"></textarea>
+    <textarea id="json-input" placeholder="Paste or type your JSON here..." spellcheck="false" data-i18n-placeholder="jsonformatter_inputPlaceholder"></textarea>
 
     <!-- Action buttons -->
     <div class="buttons-row">
-      <button id="format-btn" class="btn" title="Oblikuj JSON" data-i18n="jsonformatter_formatBtn">✨ Oblikuj JSON</button>
-      <button id="validate-btn" class="btn" title="Preveri JSON" data-i18n="jsonformatter_validateBtn">🔍 Preveri JSON</button>
-      <button id="clear-btn" class="btn" title="Počisti" disabled data-i18n="jsonformatter_clearBtn">🗑️ Počisti</button>
-      <button id="copy-btn" class="btn" title="Kopiraj JSON" disabled data-i18n="jsonformatter_copyBtn">📋 Kopiraj</button>
-      <button id="download-btn" class="btn" title="Prenesi JSON" disabled data-i18n="jsonformatter_downloadBtn">⬇️ Prenesi</button>
+      <button id="format-btn" class="btn" title="Format JSON" data-i18n="jsonformatter_formatBtn">✨ Format JSON</button>
+      <button id="validate-btn" class="btn" title="Validate JSON" data-i18n="jsonformatter_validateBtn">🔍 Validate JSON</button>
+      <button id="clear-btn" class="btn" title="Clear" disabled data-i18n="jsonformatter_clearBtn">🗑️ Clear</button>
+      <button id="copy-btn" class="btn" title="Copy JSON" disabled data-i18n="jsonformatter_copyBtn">📋 Copy</button>
+      <button id="download-btn" class="btn" title="Download JSON" disabled data-i18n="jsonformatter_downloadBtn">⬇️ Download</button>
     </div>
 
     <!-- Tooltip toggle -->
     <button class="tooltip-toggle-btn" data-tooltip-target="json-tip" aria-expanded="false" aria-controls="json-tip">
-      <i class="fas fa-lightbulb tooltip-icon"></i> <span data-i18n="jsonformatter_tooltipTitle">💡 Kako uporabljati to orodje:</span>
+      <i class="fas fa-lightbulb tooltip-icon"></i> <span data-i18n="jsonformatter_tooltipTitle">💡 How to use this tool:</span>
     </button>
 
     <!-- Tooltip content -->
     <div id="json-tip" class="tooltip-box hidden" aria-live="polite">
-      <p><strong data-i18n="jsonformatter_tooltipTitle">💡 Kako uporabljati to orodje:</strong></p>
+      <p><strong data-i18n="jsonformatter_tooltipTitle">💡 How to use this tool:</strong></p>
       <ul>
-        <li data-i18n="jsonformatter_tooltipStep1">Prilepite ali naložite JSON datoteko.</li>
-        <li data-i18n="jsonformatter_tooltipStep2">Kliknite »Oblikuj JSON« za lepši prikaz.</li>
-        <li data-i18n="jsonformatter_tooltipStep3">Kliknite »Preveri JSON« za preverjanje napak.</li>
-        <li data-i18n="jsonformatter_tooltipStep4">Prenesite ali kopirajte oblikovan JSON.</li>
+        <li data-i18n="jsonformatter_tooltipStep1">Paste or upload a JSON file.</li>
+        <li data-i18n="jsonformatter_tooltipStep2">Click "Format JSON" for a pretty view.</li>
+        <li data-i18n="jsonformatter_tooltipStep3">Click "Validate JSON" to check for errors.</li>
+        <li data-i18n="jsonformatter_tooltipStep4">Download or copy the formatted JSON.</li>
       </ul>
     </div>
 
