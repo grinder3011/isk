@@ -101,7 +101,7 @@
   "wordcounter_sentences_label": "Stavki",
   "wordcounter_unique_label": "Unikatne besede",
   "wordcounter_copy_results_title": "Kopiraj rezultate",
-  "wordcounter_download_results_title": "Prenesi rezultate"
+  "wordcounter_download_results_title": "Prenesi rezultate",
   "imagecropper_header": "🖼️ Enostavni obrezovalnik slik",
   "imagecropper_upload": "📂 Naloži sliko",
   "imagecropper_drawCrop": "✏️ Nariši novo območje obreza",
@@ -270,4 +270,3 @@
   "textcleaner_tooltipStep3": "Izberite možnosti čiščenja, kot so odstranjevanje posebnih znakov, obrezovanje presledkov ali vstavljanje ločil.",
   "textcleaner_tooltipStep4": "Kliknite 'Obdelaj', da si ogledate rezultate, ki jih lahko kopirate ali prenesete."
 }
-
