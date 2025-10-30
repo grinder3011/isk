@@ -64,6 +64,37 @@
         <i class="fas fa-chevron-down arrow"></i>
       </button>
 
+      <!-- More options panel (RESTORED) -->
+      <section id="more-options" class="more-options" hidden>
+        <fieldset class="fieldset-options">
+          <legend><i class="fas fa-cogs"></i> <span data-i18n="wordcounter_moreOptions">Counting Options</span></legend>
+          <label><input type="checkbox" id="include-spaces" checked /> <span data-i18n="wordcounter_count_spaces">Count spaces</span></label>
+          <label><input type="checkbox" id="ignore-punctuation" /> <span data-i18n="wordcounter_ignore_punct">Ignore punctuation</span></label>
+          <label><input type="checkbox" id="count-sentences" /> <span data-i18n="wordcounter_enable_sentences">Enable sentence count</span></label>
+        </fieldset>
+
+        <fieldset class="fieldset-options">
+          <legend><i class="fas fa-filter"></i> <span data-i18n="wordcounter_moreOptions">Unique Word Filters</span></legend>
+          <label><input type="checkbox" id="filter-1-letter" /> <span data-i18n="wordcounter_exclude_1_letter">Exclude 1-letter words</span></label>
+          <label><input type="checkbox" id="filter-2-letter" /> <span data-i18n="wordcounter_exclude_2_letter">Exclude 2-letter words</span></label>
+        </fieldset>
+
+        <fieldset class="fieldset-options">
+          <legend><i class="fas fa-file-word"></i> <span data-i18n="wordcounter_moreOptions">Original Text Tools</span></legend>
+          <div class="case-buttons">
+            <button id="to-uppercase" class="btn case-btn" title="Convert to UPPERCASE" data-i18n="wordcounter_uppercase_btn"><i class="fas fa-arrow-up"></i> UPPERCASE</button>
+            <button id="to-lowercase" class="btn case-btn" title="Convert to lowercase" data-i18n="wordcounter_lowercase_btn"><i class="fas fa-arrow-down"></i> lowercase</button>
+            <button id="to-titlecase" class="btn case-btn" title="Convert to Title Case" data-i18n="wordcounter_titlecase_btn"><i class="fas fa-capsules"></i> Title Case</button>
+          </div>
+          <div class="original-text-actions">
+            <button id="copy-original" class="btn action-btn" data-i18n="wordcounter_copy_original"><i class="fas fa-copy"></i> Copy Original</button>
+            <button id="download-original" class="btn action-btn" data-i18n="wordcounter_download_original"><i class="fas fa-download"></i> Download Original</button>
+          </div>
+        </fieldset>
+
+        <button id="reset-btn" class="btn reset-btn extra-spacing" data-i18n="wordcounter_reset_btn"><i class="fas fa-undo"></i> Reset</button>
+      </section>
+
     </main>
   </div>
 
