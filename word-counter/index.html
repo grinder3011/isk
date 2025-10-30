@@ -10,12 +10,12 @@
 </head>
 <body>
 
-  <!-- Full-width header -->
+  <!-- Header -->
   <header class="header">
     <h1 class="tool-title" data-i18n="counter_header_title">Word & Character Counter +</h1>
   </header>
 
-  <!-- Centered container for the rest of the content -->
+  <!-- Container -->
   <div class="container">
 
     <!-- Back/Home button -->
@@ -28,12 +28,11 @@
       <textarea id="text-input" placeholder="Start typing or paste your text here..." rows="8" aria-describedby="text-desc" data-i18n-placeholder="counter_placeholder_text"></textarea>
       <div id="text-desc" class="sr-only" data-i18n="counter_text_desc">Input your text to count words and characters</div>
   
-      <!-- Tooltip trigger -->
+      <!-- Tooltip -->
       <button class="tooltip-toggle-btn" data-tooltip-target="json-tip" aria-expanded="false" aria-controls="json-tip">
         <i class="fas fa-lightbulb tooltip-icon"></i> <span data-i18n="counter_tooltip_button">How to use this tool?</span>
       </button>
       
-      <!-- Tooltip content -->
       <div id="json-tip" class="tooltip-box hidden" aria-live="polite">
         <p>💡 <strong data-i18n="counter_tooltip_title">How to use Word & Character Counter +:</strong></p>
         <ul>
@@ -103,5 +102,6 @@
 
   <script src="../tooltip.js" defer></script>
   <script src="counter.js"></script>
+  <script src="../translations/i18n.js" defer></script>
 </body>
 </html>
