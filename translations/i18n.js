@@ -1,73 +1,61 @@
 // translations/i18n.js
 
-let currentLang = 'en';
-let translations = {};
-const defaultTexts = new Map();
+let currentLang = localStorage.getItem('lang') || 'en';
+let translations = null;
 
-// Cache original text/placeholder/alt
-function cacheDefaults() {
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    if (!defaultTexts.has(el)) {
-      if (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea') {
-        defaultTexts.set(el, el.placeholder);
-      } else if (el.tagName.toLowerCase() === 'img' && el.hasAttribute('data-i18n-alt')) {
-        defaultTexts.set(el, el.alt);
-      } else {
-        defaultTexts.set(el, el.textContent);
-      }
-    }
-  });
-}
-
-// Apply translations (or revert to default if missing)
-function applyTranslations() {
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    const translated = translations[key];
-
-    if (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea') {
-      el.placeholder = translated || defaultTexts.get(el) || '';
-    } else if (el.tagName.toLowerCase() === 'img' && el.hasAttribute('data-i18n-alt')) {
-      el.alt = translated || defaultTexts.get(el) || '';
-    } else {
-      el.textContent = translated || defaultTexts.get(el) || '';
-    }
-  });
-}
-
-// Load JSON translations
+// Load translations for a given language
 async function loadTranslations(lang) {
   if (lang === 'en') {
-    translations = {}; // revert to default texts
+    // English: revert to default text
+    translations = null;
     applyTranslations();
     return;
   }
 
   try {
-    const res = await fetch(`translations/translations-${lang}.json`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    translations = await res.json();
+    // JSON file is in the same folder as this script
+    const response = await fetch(`translations_${lang}.json`);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    translations = await response.json();
     applyTranslations();
   } catch (err) {
-    console.error('Could not load translations:', err);
-    translations = {};
-    applyTranslations();
+    console.error("Could not load translations:", err);
   }
 }
 
-// Initialize
-document.addEventListener('DOMContentLoaded', () => {
-  cacheDefaults();
+// Apply translations to all elements with data-i18n
+function applyTranslations() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
 
-  const selector = document.getElementById('languageSelector');
+    if (translations && translations[key]) {
+      // Handle placeholders and alt attributes
+      if (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea') {
+        el.placeholder = translations[key];
+      } else if (el.tagName.toLowerCase() === 'img' && el.hasAttribute('data-i18n-alt')) {
+        el.alt = translations[key];
+      } else {
+        el.textContent = translations[key];
+      }
+    } else if (el.hasAttribute('data-i18n-default')) {
+      el.textContent = el.getAttribute('data-i18n-default');
+    }
+  });
+}
+
+// Initialize the language selector and apply saved language
+document.addEventListener('DOMContentLoaded', () => {
+  const selector = document.querySelector('#languageSelector');
+
   if (selector) {
     selector.value = currentLang;
     selector.addEventListener('change', e => {
       currentLang = e.target.value;
+      localStorage.setItem('lang', currentLang);
       loadTranslations(currentLang);
     });
   }
 
-  // Apply default language on page load
-  applyTranslations();
+  // Load saved or default language automatically
+  loadTranslations(currentLang);
 });
