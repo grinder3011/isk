@@ -30,8 +30,7 @@ body {
 
 /* ===== Header ===== */
 .tool-header {
-  text-align: center;
-  margin-bottom: 0;
+  padding: 2rem 1rem;
 }
 
 .tool-header h1 {
