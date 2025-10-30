@@ -46,11 +46,12 @@
       <label for="batch-value" class="batch-input-label hidden" data-i18n="unitconverter_batchMode">Values (one per line)</label>
       <textarea id="batch-value" class="batch-input hidden" placeholder="Enter one number per line" data-i18n-placeholder="unitconverter_batchMode"></textarea>
 
-      <label for="decimal-separator" title="Choose decimal separator used in numbers" data-i18n="unitconverter_decimalSeparator">Decimalno ločilo</label>
-      <select id="decimal-separator" title="Choose decimal separator used in numbers" data-i18n-title="unitconverter_decimalSeparator">
-        <option value=".">Period (.)</option>
-        <option value=",">Comma (,)</option>
-      </select>
+     <label for="decimal-separator" title="Choose decimal separator used in numbers" data-i18n="unitconverter_decimalSeparator">Decimalno ločilo</label>
+     <select id="decimal-separator" title="Choose decimal separator used in numbers" data-i18n-title="unitconverter_decimalSeparator">
+       <option value="." data-i18n="unitconverter_decimalPeriod">Pika (.)</option>
+       <option value="," data-i18n="unitconverter_decimalComma">Vejica (,)</option>
+     </select>
+
 
       <div class="batch-toggle-wrapper">
         <input type="checkbox" id="batch-toggle" />
