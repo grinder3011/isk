@@ -64,6 +64,24 @@
       </div>
     </section>
 
+    <!-- Tooltip trigger and content -->
+    <section id="tooltip-section">
+      <button class="tooltip-toggle-btn" data-tooltip-target="cleaner-tip" aria-expanded="false" aria-controls="cleaner-tip">
+        <i class="fas fa-lightbulb tooltip-icon"></i>
+        <span data-i18n="textcleaner_tooltipTitle">💡 How to use this tool:</span>
+      </button>
+
+      <div id="cleaner-tip" class="tooltip-box hidden" aria-live="polite">
+        <p><strong data-i18n="textcleaner_tooltipTitle">How to use Text & Filename Cleaner:</strong></p>
+        <ul>
+          <li data-i18n="textcleaner_tooltipStep1">Choose the task: clean filenames, clean text input, or upload text files.</li>
+          <li data-i18n="textcleaner_tooltipStep2">Enter or upload the files/text to clean.</li>
+          <li data-i18n="textcleaner_tooltipStep3">Select cleaning options, such as removing special characters, trimming spaces, or inserting separators.</li>
+          <li data-i18n="textcleaner_tooltipStep4">Click 'Process' to see results, which you can copy or download.</li>
+        </ul>
+      </div>
+    </section>
+
     <section id="options-section">
       <h2 data-i18n="cleaner_cleaningOptions">Cleaning Options</h2>
 
