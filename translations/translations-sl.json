@@ -53,6 +53,13 @@
   "renamer_preview": "Predogled imen",
   "renamer_rename": "Preimenuj",
   "renamer_reset": "Ponastavi",
+  "renamer_tooltipTitle": "Kako uporabljati Preimenovalnik datotek:",
+  "renamer_tooltipStep1": "Izberite eno ali več datotek, ki jih želite preimenovati.",
+  "renamer_tooltipStep2": "Vnesite predpono ali pripono za dodajanje besedila na začetek ali konec imena datoteke.",
+  "renamer_tooltipStep3": "Uporabite polje 'Zamenjaj besedilo' za iskanje določenih izrazov in jih zamenjajte z drugim besedilom.",
+  "renamer_tooltipStep4": "Preglejte predogled imen datotek, da preverite spremembe.",
+  "renamer_tooltipStep5": "Kliknite 'Preimenuj', da ustvarite ZIP datoteko z novimi imeni datotek.",
+
 
   "unitconverter_header": "📏 Pretvornik enot",
   "unitconverter_category": "Kategorija",
@@ -304,6 +311,7 @@
   "textcleaner_tooltipStep3": "Izberite možnosti čiščenja, kot so odstranjevanje posebnih znakov, obrezovanje presledkov ali vstavljanje ločil.",
   "textcleaner_tooltipStep4": "Kliknite 'Obdelaj', da si ogledate rezultate, ki jih lahko kopirate ali prenesete."
 }
+
 
 
 
