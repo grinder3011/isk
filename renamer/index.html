@@ -60,6 +60,26 @@
         <button id="rename-btn" data-i18n="renamer_rename">📝 Rename</button>
         <button id="reset-btn" data-i18n="renamer_reset">🔄 Reset</button>
       </div>
+
+      <!-- Tooltip trigger -->
+      <button class="tooltip-toggle-btn" data-tooltip-target="renamer-tip" aria-expanded="false" aria-controls="renamer-tip">
+        <i class="fas fa-lightbulb tooltip-icon"></i> 
+        <span data-i18n="renamer_tooltipTitle">💡 How to use File Renamer:</span>
+      </button>
+
+      <!-- Tooltip content -->
+      <div id="renamer-tip" class="tooltip-box hidden" aria-live="polite">
+        <p>💡 <strong data-i18n="renamer_tooltipTitle">How to use File Renamer:</strong></p>
+        <ul>
+          <li data-i18n="renamer_tooltipStep1">Select one or more files to rename.</li>
+          <li data-i18n="renamer_tooltipStep2">Add a prefix or suffix to customize names.</li>
+          <li data-i18n="renamer_tooltipStep3">Use the Replace fields to find and replace text in filenames.</li>
+          <li data-i18n="renamer_tooltipStep4">Preview the new filenames in the preview area.</li>
+          <li data-i18n="renamer_tooltipStep5">Click “Rename” to apply the changes.</li>
+          <li data-i18n="renamer_tooltipStep6">Click “Reset” to clear and start again.</li>
+        </ul>
+      </div>
+
     </div>
   </main>
 
